@@ -236,4 +236,33 @@ Wireless communication normally transmitting in a narrow band of frequency, howe
 
 #### Radio Transmission
 
+Omnidirectional, transmitter and receiver do not need to align perfectly. And comparing to guided media, RF can travel longer distance, but interference between users is a problem.
+
+#### Microwave Transmission
+
+Microwave travel in straight line, so repeater is needed to avoid earth. And signal may be delayed due to passing lower atmosphere, called **multipath fading**
+
+> It has advantages over fibers, because it does not take up a lot of place to embed the cable, only towers are required, and it is relatively inexpensive.
+
+#### Infrared Transmission
+
+For short range communication.
+
+#### Light Transmission
+
+LANs from two buildings could be connected via the laser on the top of both building.
+
+> High bandwidth, low cost, and secure, although it is eaisly distorted, it could be used in vacuum in space programs.
+
+#### Geo-stationary Satellite
+
+There could be maximum 180 Geo-stationary satellite. Through development, footprint of satellite is shrank, from 1/3 sphere, to spot beam. And require station to transmit signal to local, from large one to small ones called VSATs.
+
+VSATs requires ground hub to transmit signal using high power antenna.
+
+> very useful when connecting rural area using VSATs, signal transmit faster because the medium is air, but not very secret, however, cost does not grow as distance, and error rate is low.
+
+#### Medium-Earth Orbit Satellites
+
+
 
