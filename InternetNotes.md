@@ -196,4 +196,12 @@ It is better sheilded hence run on higher bandwidth with longer range.
 
 #### Power lines
 
+Initially used by power company for remote metering, now reused both in home as LAN and outside home as broadband Internet connection.(Mostly in home)
 
+Difficulties:
+
+1. Wiring normally setup for 50-60Hz electricity and will attenuate high freq signals.
+
+2. Without careful twisting the twisted pairs, the wire will act like an antenna.
+
+> Despite its disadvantage on transmitting high freq signal and bad noise immunity, it is still possible to transmit over 100Mbps signal over power lines, but requires better standards.
