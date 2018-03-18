@@ -225,3 +225,15 @@ The modern wireless digital communication began in the Hawaiian Island - -
 The basic of unguider media is electromegnatic wave, caused by the movement of a electron. It has a oscillation freq and wavelength where their product shall be light speed in vacuum.
 
 ![Electromegnatic Wave Spectrum](http://www.shieldingsystems.com/images/electromagnetic_spectrum%20.png)
+
+Wireless communication normally transmitting in a narrow band of frequency, however, it can also use wide bandwidth:
+
+1. Frequency hopping spread spectrum: transmitter jump from freq to freq, usually by military for harder detection.
+
+2. Direct sequence spread spectrum: use a code sequence to spread the data to a wide bandwidth, for example, CDMA (Code Division Multiple Access).
+
+3. Ultra Wide-Band: sends a series of rapid pulses, varying their position to communicate information.
+
+#### Radio Transmission
+
+
