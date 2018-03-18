@@ -188,3 +188,12 @@ There are some topologies:
 
 ![Coaxial Cable](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coaxial_cable_cutaway.svg/2000px-Coaxial_cable_cutaway.svg.png)
 
+It is better sheilded hence run on higher bandwidth with longer range.
+
+50ohm one is normally used for digital transmission, while 75ohm one is normally used for analog transmission and TV signals(historical reason: early antennas had 300ohm impedance with 4:1 impedance-matching transformers.)
+
+> It has high bandwidth and good noise immunity, but gradually replaced by optic fiber and long-haul routes.
+
+#### Power lines
+
+
