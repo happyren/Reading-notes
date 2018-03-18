@@ -217,3 +217,7 @@ Optic fiber transmission requires: light source, transmission medium, detector.
 Optics need either connectors, mechanically spliced, or melted together.
 
 > optic fiber has higher bandwidth, lower attenuate, better noise immunity, lower weight, lower installation cost, better security; but it also requires better engineering, more protection, and extra bi-directional design.
+
+### Unguided media
+
+The modern wireless digital communication began in the Hawaiian Island - -
