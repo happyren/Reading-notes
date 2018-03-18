@@ -160,7 +160,7 @@ Bandwidth has different definition in terms of electrical (Hz) and CS (bits/sec)
 
 For bandwidth B, the sampling rate should be at least 2B to reconstruct the original signal and more than 2B is pointless due to the fact that the higher frequency is filtered out by the low pass filter using to limit the bandwidth.
 
-> Nyquist theorem gives noiseless channel: Max(Data Rate) = 2BlogV; Shannon theorem gives noisy channel: Max(Data Rate) = BlogS/N, or if the S/N is in dB, Max(Data Rate) = B*dB/3.
+> Nyquist theorem gives noiseless channel: Max(Data Rate) = 2BlogV; Shannon theorem gives noisy channel: Max(Data Rate) = BlogS/N, or if the S/N is in dB, Max(Data Rate) = B\*dB/3.
 
 ### Guided media
 
@@ -178,14 +178,13 @@ Two copper wires twisted into one, forming an attena, cancelling out wire radiat
 
 There are some topologies:
 
-1. Links can be used in both direction at the same time is called full-duplex.
+1. Links can be used in both direction at the same time is called **full-duplex**.
 
-2. Links can be used in bi-direction but only one at a time is called half-duplex.
+2. Links can be used in bi-direction but only one at a time is called **half-duplex**.
 
-3. Links can only be used in one direction is called simplex.
+3. Links can only be used in one direction is called **simplex**.
 
 #### Coaxial cable
 
 ![Coaxial Cable](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Coaxial_cable_cutaway.svg/2000px-Coaxial_cable_cutaway.svg.png)
-
 
