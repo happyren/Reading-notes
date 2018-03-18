@@ -222,4 +222,6 @@ Optics need either connectors, mechanically spliced, or melted together.
 
 The modern wireless digital communication began in the Hawaiian Island - -
 
+The basic of unguider media is electromegnatic wave, caused by the movement of a electron. It has a oscillation freq and wavelength where their product shall be light speed in vacuum.
 
+![Electromegnatic Wave Spectrum](http://a360-wp-uploads.s3.amazonaws.com/wp-content/uploads/hearingr/2017/06/GalsterFig1_ElectromagneticSpectrumGraphic.jpg)
