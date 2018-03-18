@@ -205,3 +205,15 @@ Difficulties:
 2. Without careful twisting the twisted pairs, the wire will act like an antenna.
 
 > Despite its disadvantage on transmitting high freq signal and bad noise immunity, it is still possible to transmit over 100Mbps signal over power lines, but requires better standards.
+
+#### Optic fiber
+
+Optic fiber is capable transmitting at extremly high speed, tens Tbps, however, it is limited by converting a electrical signal into optic signal.
+
+Optic fiber transmission requires: light source, transmission medium, detector.
+
+> optics with light bouncing inside is multi-mode, without that bouncing is single-mode.
+
+Optics need either connectors, mechanically spliced, or melted together.
+
+> optic fiber has higher bandwidth, lower attenuate, better noise immunity, lower weight, lower installation cost, better security; but it also requires better engineering, more protection, and extra bi-directional design.
