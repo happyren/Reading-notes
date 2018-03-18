@@ -172,7 +172,7 @@ Write data into magnetic media, aka DVD, physically transmitted them to the dest
 
 #### Twisted Pairs
 
-Two copper wires twisted into one, forming an attena, cancelling out wire radiates, transmitting signal using the voltage difference between two wire, hence less affected by noise.
+Two copper wires twisted into one, forming an attena, cancelling out wire radiates, transmitting signal using the voltage difference between two wire, hence less affected by noise, examples could be telephone and ADSL.
 
 > It could achieve several megabits/sec, it has low cost and can go online.
 
@@ -264,5 +264,18 @@ VSATs requires ground hub to transmit signal using high power antenna.
 
 #### Medium-Earth Orbit Satellites
 
+GPS.
 
+#### Low-Earth Orbit Satellites
 
+Gound stations don't need much power, delay is small, only ms around the earth, and price is relatively low.
+
+#### Overall
+
+Mostly, fibers are winning, but satellites have pros:
+
+1. deploy could be very fast.
+
+2. connection at rural area is achieved.
+
+3. more suitable for broadcasting.
