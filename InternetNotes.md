@@ -123,7 +123,7 @@ The router operates on this layer. Assign IP address to a certain MAC address or
 
 Switch operates on this layer. Provides data transmission guide to packets.(This could be exploit with [ARP spoofing](https://en.wikipedia.org/wiki/ARP_spoofing).)
 
-### Physical layer
+### [Physical Layer](#physical-layer)
 
 All physical stuff connect the computers together. Most of network problem comes in this layer.
 
@@ -221,3 +221,5 @@ Optics need either connectors, mechanically spliced, or melted together.
 ### Unguided media
 
 The modern wireless digital communication began in the Hawaiian Island - -
+
+
