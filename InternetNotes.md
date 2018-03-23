@@ -285,11 +285,11 @@ Mostly, fibers are winning, but satellites have pros:
 
 This layer has three objective:
 
-1. providing services to the network layer.
+1. [Providing services to the network layer.](#framing)
 
-2. Dealing with transmission error.
+2. [Dealing with transmission error.](#error-control)
 
-3. Flow control
+3. [Flow control](#flow-control)
 
 Three acknowledgment scheme:
 
@@ -299,7 +299,7 @@ Three acknowledgment scheme:
 
 3. connection oriented: each frame is received exactly once and all frames are received in the right sequence.
 
-#### Framing
+### Framing
 
 Data-link layer is in charge of detecting, or more, correcting the error in the transmitted signal. Normal way is to break the bit sequence and framing them.
 
@@ -315,31 +315,31 @@ A good deisgn is when receiver is easy to find the start of a new frame and the 
 
 4. Physical layer coding violations
 
-##### Byte count
+#### Byte count
 
 Use a field to count how many byte sending in the packet.
 
 > it is very possible that the bit flipped and the counter gives the wrong bytes, hence leading error.
 
-##### FLAG \+ Byte stuffing
+#### FLAG \+ Byte stuffing
 
 FLAG means adding the same byte called **FLAG** to both the beginning and the end of the frame to announce the beginning and ending of a frame.
 
 > it is possible that data contains the bit forms the **FLAG** and **ESC** Whenever sees a **ESC** or **FLAG** add a **ESC** before. PPP is one example
 
-##### FLAG \+ bit stuffing
+#### FLAG \+ bit stuffing
 
 FLAG has the same mining, but bit stuffing inserts bit after 5 \"1\" because \"01111110\" means **FLAG**
 
 both of bit stuffing and byte stuffing would increase the frame size.
 
-##### Physical layer coding violation
+#### Physical layer coding violation
 
 In physical layer, usually bits are mapped with more signals to safe guard redundency, we could utilizing extra bits to send reserved signals indicates the start and end of a frame, without needs for stuffing.
 
 The popular method is to include a long string called **preamble**, which starts the frame, and then use a field to indicates how long a frame is.
 
-#### Error control
+### Error control
 
 1. Ack is normally the way of solving the problem of letting the sender know whether the packet has arrived successfully or not.
 
@@ -347,6 +347,6 @@ The popular method is to include a long string called **preamble**, which starts
 
 3. Assign sequence number to each frame, so that receiver can know whether one frame is received twice.
 
-#### Flow Control
+### Flow Control
 
 
