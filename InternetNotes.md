@@ -348,5 +348,11 @@ The popular method is to include a long string called **preamble**, which starts
 3. Assign sequence number to each frame, so that receiver can know whether one frame is received twice.
 
 ### Flow Control
+Two major schemes, one is **feedback-based flow control**
 
+> receiver send feedback to allow sender to continue send packets, or tell it how receiver is going on processing packets.
+
+**rate-based flow control**
+
+> protocol has built-in mechanism to limit the sender's sending rate. 
 
