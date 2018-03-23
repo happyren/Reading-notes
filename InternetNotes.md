@@ -282,3 +282,19 @@ Mostly, fibers are winning, but satellites have pros:
 
 
 ## Data-Link Layer
+
+This layer has three objective:
+
+1. providing services to the network layer.
+
+2. Dealing with transmission error.
+
+3. Flow control
+
+Three acknowledgment scheme:
+
+1. unacknowledged connection-less: Ethernet, because the connection has very low error rate, no need to send ack.
+
+2. acknowledged connection-less: WiFi, because the connection is unreliable, sending ack will reduce the cost to recover message.
+
+3. connection oriented: each frame is received exactly once and all frames are received in the right sequence.
