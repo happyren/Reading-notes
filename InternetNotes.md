@@ -299,4 +299,6 @@ Three acknowledgment scheme:
 
 3. connection oriented: each frame is received exactly once and all frames are received in the right sequence.
 
+### Framing
 
+Data-link layer is in charge of detecting, or more, correcting the error in the transmitted signal. Normal way is to break the bit sequence and framing them.
