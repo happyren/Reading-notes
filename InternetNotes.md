@@ -298,3 +298,5 @@ Three acknowledgment scheme:
 2. acknowledged connection-less: WiFi, because the connection is unreliable, sending ack will reduce the cost to recover message.
 
 3. connection oriented: each frame is received exactly once and all frames are received in the right sequence.
+
+
