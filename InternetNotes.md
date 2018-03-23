@@ -302,3 +302,5 @@ Three acknowledgment scheme:
 ### Framing
 
 Data-link layer is in charge of detecting, or more, correcting the error in the transmitted signal. Normal way is to break the bit sequence and framing them.
+
+A good deisgn is when receiver is easy to find the start of a new frame and the information took up as less bandwidth as possible.
