@@ -353,15 +353,20 @@ There are two mean method, adding **error correcting code** and **error detectin
 
 bit flip is harder than erasure channel.
 
-#### Error correcting codes
+---
 
-1. Hamming codes
+1. [Hamming codes](#hamming-codes)
 
-2. Binary convolutional codes
+2. [Binary convolutional codes](#binary-convolutional-codes)
 
-3. Reed-Solomon codes
+3. [Reed-Solomon codes]
 
-4. Low-Density Parity Check codes
+4. [Low-Density Parity Check codes]
+
+#### Hamming Codes
+
+#### Binary Convolutional Codes
+---
 
 ### Flow Control
 Two major schemes, one is **feedback-based flow control**
