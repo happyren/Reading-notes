@@ -320,6 +320,7 @@ A good deisgn is when receiver is easy to find the start of a new frame and the 
 Use a field to count how many byte sending in the packet.
 > it is very possible that the bit flipped and the counter gives the wrong bytes, hence leading error.
 
-#### Byte stuffing
+#### FLAG \+ Byte stuffing
+FLAG means adding the same byte called **FLAG** to both the beginning and the end of the frame to announce the beginning and ending of a frame.
 
-Whenever sees a **ESC** or **FLAG** add a **ESC** before.
+> it is possible that data contains the bit forms the **FLAG** and **ESC** Whenever sees a **ESC** or **FLAG** add a **ESC** before.
