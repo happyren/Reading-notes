@@ -304,3 +304,13 @@ Three acknowledgment scheme:
 Data-link layer is in charge of detecting, or more, correcting the error in the transmitted signal. Normal way is to break the bit sequence and framing them.
 
 A good deisgn is when receiver is easy to find the start of a new frame and the information took up as less bandwidth as possible.
+
+4 possible methods:
+
+1. Byte count
+
+2. Flag byte with byte stuffing
+
+3. Flag byte with bit stuffing
+
+4. Physical layer coding violations
