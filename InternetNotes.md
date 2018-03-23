@@ -314,3 +314,12 @@ A good deisgn is when receiver is easy to find the start of a new frame and the 
 3. Flag byte with bit stuffing
 
 4. Physical layer coding violations
+
+#### Byte count
+
+Use a field to count how many byte sending in the packet.
+> it is very possible that the bit flipped and the counter gives the wrong bytes, hence leading error.
+
+#### Byte stuffing
+
+Whenever sees a **ESC** or **FLAG** add a **ESC** before.
