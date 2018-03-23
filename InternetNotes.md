@@ -307,13 +307,13 @@ A good deisgn is when receiver is easy to find the start of a new frame and the 
 
 4 possible methods:
 
-1. Byte count
+1. [Byte count](#byte-count)
 
-2. Flag byte with byte stuffing
+2. [Flag byte with byte stuffing](#flag-byte-stuffing)
 
-3. Flag byte with bit stuffing
+3. [Flag byte with bit stuffing](#flag-bit-stuffing)
 
-4. Physical layer coding violations
+4. [Physical layer coding violations](#physical-layer-coding-violations)
 
 #### Byte count
 
@@ -321,13 +321,13 @@ Use a field to count how many byte sending in the packet.
 
 > it is very possible that the bit flipped and the counter gives the wrong bytes, hence leading error.
 
-#### FLAG \+ Byte stuffing
+#### FLAG Byte stuffing
 
 FLAG means adding the same byte called **FLAG** to both the beginning and the end of the frame to announce the beginning and ending of a frame.
 
 > it is possible that data contains the bit forms the **FLAG** and **ESC** Whenever sees a **ESC** or **FLAG** add a **ESC** before. PPP is one example
 
-#### FLAG \+ bit stuffing
+#### FLAG bit stuffing
 
 FLAG has the same mining, but bit stuffing inserts bit after 5 \"1\" because \"01111110\" means **FLAG**
 
@@ -346,6 +346,22 @@ The popular method is to include a long string called **preamble**, which starts
 2. Timer is used to get rid of the frame lossing trouble, so sender will not wait forever for a ACK of a lossing frame or lossing ACK frame.
 
 3. Assign sequence number to each frame, so that receiver can know whether one frame is received twice.
+
+There are two mean method, adding **error correcting code** and **error detecting code**.
+
+> **error correcting code** or **FEC** is used in noisy channels because resend could likely be errors again. 
+
+bit flip is harder than erasure channel.
+
+#### Error correcting codes
+
+1. Hamming codes
+
+2. Binary convolutional codes
+
+3. Reed-Solomon codes
+
+4. Low-Density Parity Check codes
 
 ### Flow Control
 Two major schemes, one is **feedback-based flow control**
