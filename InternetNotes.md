@@ -58,7 +58,7 @@ Generally, there are two type transmission technology in daily usage.
 
 And the technology could also be categorized by scale:
 | Distance | Density | Example |
-| ------------------ |:-------:|:-------:|
+| :------------------: |:-------:|:-------:|
 | 1 m | Square Meter | Personal Area Network|
 | 10 m | Room | Local Area Network |
 | 100m | Building | LAN |
@@ -323,4 +323,7 @@ Use a field to count how many byte sending in the packet.
 #### FLAG \+ Byte stuffing
 FLAG means adding the same byte called **FLAG** to both the beginning and the end of the frame to announce the beginning and ending of a frame.
 
-> it is possible that data contains the bit forms the **FLAG** and **ESC** Whenever sees a **ESC** or **FLAG** add a **ESC** before.
+> it is possible that data contains the bit forms the **FLAG** and **ESC** Whenever sees a **ESC** or **FLAG** add a **ESC** before. PPP is one example
+
+#### FLAG \+ bit stuffing
+FLAG has the same mining, but bit stuffing gives 
