@@ -363,6 +363,8 @@ bit flip is harder than erasure channel.
 
 4. [Low-Density Parity Check codes](#low-density-parity-check-codes)
 
+**m** reps message length, **r** reps redundant bits, and the encoded code word length is **n = m + r**, code rate is **m/n**.
+
 #### Hamming Codes
 
 #### Binary Convolutional Codes
@@ -371,7 +373,17 @@ bit flip is harder than erasure channel.
 
 #### Low-Density Parity Check Codes
 ---
+1. [Parity](#parity)
 
+2. [Checksums](#checksums)
+
+3. [Cyclic Redundancy Checks](#cyclic-redundancy-checks)
+
+#### Parity
+
+#### Checksums
+
+#### Cyclic Redundancy Checks
 ### Flow Control
 Two major schemes, one is **feedback-based flow control**
 
