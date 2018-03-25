@@ -375,7 +375,7 @@ All possible code words should be **2^m/2^n**
 
 With the error of **d**, we are expecting to correct it with a **Distance 2d+1 code** and detect it with a **Distance d+1 code**.
 
-Given **m** bits message, if we wish to correct all single error, we are expecting **n+1** pattern for each of **2^m** pattern, it should be less than **2^n**, henc we have **(N+1)\times 2^m <= 2^n**
+Given **m** bits message, if we wish to correct all single error, we are expecting **n+1** pattern for each of **2^m** pattern, it should be less than **2^n**, henc we have **(N+1) * 2^m <= 2^n**
 
 #### Binary Convolutional Codes
 
