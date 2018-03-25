@@ -367,6 +367,14 @@ bit flip is harder than erasure channel.
 
 #### Hamming Codes
 
+> Hamming distance is the number of bits positions in which two code words differes.
+
+Firstly, all possible code words should be computed and form a list from which the minimum **Hamming Distance** should be found thus called the **Hamming Distance of whole list**. And it could be called a **Distance x code**
+
+All possible code words should be **2^m/2^n**
+
+With the error of **d**, we are expecting to correct it with a **Distance 2d+1 code** and detect it with a **Distance d+1 code**.
+
 #### Binary Convolutional Codes
 
 #### Reed-Solomon Codes
