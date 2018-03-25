@@ -377,6 +377,8 @@ With the error of **d**, we are expecting to correct it with a **Distance 2d+1 c
 
 Given **m** bits message, if we wish to correct all single error, we are expecting **n+1** pattern for each of **2^m** pattern, it should be less than **2^n**, henc we have **(N+1) * 2^m <= 2^n**
 
+Message bit **m** is checksumed by the ordering bits, for example, **m3 = p1 + p2**, **m7 = p1 + p2 + p4**
+
 #### Binary Convolutional Codes
 
 #### Reed-Solomon Codes
