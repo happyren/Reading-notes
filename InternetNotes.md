@@ -359,13 +359,17 @@ bit flip is harder than erasure channel.
 
 2. [Binary convolutional codes](#binary-convolutional-codes)
 
-3. [Reed-Solomon codes]
+3. [Reed-Solomon codes](#reed-solomon-codes)
 
-4. [Low-Density Parity Check codes]
+4. [Low-Density Parity Check codes](#low-density-parity-check-codes)
 
 #### Hamming Codes
 
 #### Binary Convolutional Codes
+
+#### Reed-Solomon Codes
+
+#### Low-Density Parity Check Codes
 ---
 
 ### Flow Control
