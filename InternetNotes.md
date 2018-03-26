@@ -409,6 +409,11 @@ Most popular RS code is (255,223) code, where it could error correct based on by
 
 #### Low-Density Parity Check Codes
 
+In this codes, each output is computed with a fraction of input, where matrix rep of a code has low density of 1s.
+
+While decoding, it will use an approximation algorithm to iteratively improves the best fit of the incoming data to a legal codeword.
+
+> Very high error correcting ability, outperform above codes, and widely used in new protocols.
 
 ---
 1. [Parity](#parity)
@@ -419,9 +424,20 @@ Most popular RS code is (255,223) code, where it could error correct based on by
 
 #### Parity
 
+Simple idea is that even 1 then add 0, odd 1 then add 1, it can detect single error.
+
+Compare to Hamming Code, for 1,000 bits info block, Hamming Codes requires 10 bits for correction, 1,000,000 bits requires 10,000 bits check. Where with error rate at 10^-6, for every one of the 1000 blocks, 1 will be error, to detect and retransmit it, one extra block of 1001 is required, hence total will cost 2002 bits, is significantly smaller than hamming 10,000 bits.
+
+> We could use interleaving to deal with burst errors.
+
 #### Checksums
 
+Calculating a number based on the information and appended to the information, any error will cause the mis-recomputation of the checksum hence leads to error.
+
 #### Cyclic Redundancy Checks
+
+CRC is also known as polynomial code, it requires both sender and receiver agree on a generator, then if the receiver receives a code that cannot be fully divide by the generator, it means there is an error.
+
 ### Flow Control
 Two major schemes, one is **feedback-based flow control**
 
