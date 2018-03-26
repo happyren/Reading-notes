@@ -379,7 +379,11 @@ Given **m** bits message, if we wish to correct all single error, we are expecti
 
 Message bit **m** is checksumed by the ordering bits, for example, **m3 = p1 + p2**, **m7 = p1 + p2 + p4**
 
+When receiving a message code, it will computes the hamming codes based on the parity, each parity bit is calculated by check the message bit it related to, if comes out odd 1s, then parity bit shall be 1; then, after receiver receives hamming code, it will recompute it, by check the parity including check bits, if all checks give 0, then it is correct, other wise it will pinpoint the error bit.
+
 #### Binary Convolutional Codes
+
+
 
 #### Reed-Solomon Codes
 
