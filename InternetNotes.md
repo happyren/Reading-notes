@@ -383,11 +383,33 @@ When receiving a message code, it will computes the hamming codes based on the p
 
 #### Binary Convolutional Codes
 
+No natural message size and encoding boundary as in block codes, output depends on current and previous bits, number of previous bits that output depends on is the constraint length.
 
+A Convolutional codes is specified by its rate and constraint length.
+
+> Widely used in deployed networks, GSM, Satellite, Wi-Fi, NASA [r=1/2, k=7] code is used in Voyager program and reused in Wi-Fi.
+
+For Wi-Fi, there should be 6 memory registers, when 111 input in, 000000 -> 100000 -> 110000 -> 111000, and 7 bits input is required to wipe out all previous input, hence k=7.
+
+> To decode the convolutional code is to find the input sequence that is most likely to generate the output bits. Viterbi Algorithm is used in this codes.
+
+Using Viterbi algorithm error correcting and working with uncertain bits is **soft-decision decoding**, deciding which bits the signal is before error correcting is called **hard-decision decoding**. 
 
 #### Reed-Solomon Codes
 
+Reed-solomon codes is a linear block code, but it works on byte.
+
+> it works based on the fact tha tany n-degree polynomial uniquely determined by the n+1 points' positions.
+
+This method means, any two signal points sits on a line, we could add two more points on this line as redudant, one signal is error, three are on the line, and the one is not on the line is the error symbol, and we could hence correct the error.
+
+Most popular RS code is (255,223) code, where it could error correct based on byte, 255 = 2^8 - 1, where 223 = 2^8 - 1 - 2 * 16, where 16 is the symbol-error corerecting ability of this code.
+
+> it could be used with convolutional code, and correct both burst and single error.
+
 #### Low-Density Parity Check Codes
+
+
 ---
 1. [Parity](#parity)
 
