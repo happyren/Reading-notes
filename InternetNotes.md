@@ -99,31 +99,31 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 OSI model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
 
-### Application layer
+- Application layer
 
 This is the one that the **user actually interacting with**, like safari, chrome, or outlook application.
 
-### Presentation layer
+- Presentation layer
 
 This is the one that **operating system is on**, information user input on application layer will be sent to presentation layer to the operating system to be further processed.
 
-### Session layer
+- Session layer
 
 This one deals with the communication session between two computers. **It creates session with the web server which user would like to get data from**
 
-### Transport layer
+- Transport layer
 
 This layer decides the data size of one transmission.
 
-### Network layer
+- Network layer
 
 The router operates on this layer. Assign IP address to a certain MAC address or a certain NIC.
 
-### [Data Link layer](#data-link-layer)
+- [Data Link layer](#data-link-layer)
 
 Switch operates on this layer. Provides data transmission guide to packets.(This could be exploit with [ARP spoofing](https://en.wikipedia.org/wiki/ARP_spoofing).)
 
-### [Physical Layer](#physical-layer)
+- [Physical Layer](#physical-layer)
 
 All physical stuff connect the computers together. Most of network problem comes in this layer.
 
