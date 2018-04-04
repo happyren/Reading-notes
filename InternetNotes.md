@@ -439,11 +439,11 @@ Calculating a number based on the information and appended to the information, a
 CRC is also known as polynomial code, it requires both sender and receiver agree on a generator, then if the receiver receives a code that cannot be fully divide by the generator, it means there is an error.
 
 ### Flow Control
+
 Two major schemes, one is **feedback-based flow control**
 
 > receiver send feedback to allow sender to continue send packets, or tell it how receiver is going on processing packets.
 
-**rate-based flow control**
+the other one is **rate-based flow control**
 
 > protocol has built-in mechanism to limit the sender's sending rate. 
-
