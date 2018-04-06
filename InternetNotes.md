@@ -6,7 +6,6 @@
 
 - [OSI model](#osi-model)
 - [Why Internet](#why-internet)
-- [Lecture Notes](#lecture-notes)
 
 ## Why Internet
 
@@ -129,18 +128,6 @@ All physical stuff connect the computers together. Most of network problem comes
 
 - cable disconnect
 - cable misconnect
-
-## Lecture Notes
-
-### Link Model
-
-consider with Bandwidth and Transfer Rate. Delay is always considered as the delay experienced by the first bit.
-
-> Transfer delay: T-delay = Message length / Transfer Rate
-> Propogation delay: P-delay = Channel length / Signal Speed
-> Message Latency: ML = T-delay + M-delay
-
-### Communication type
 
 ## Physical Layer
 
@@ -446,4 +433,6 @@ Two major schemes, one is **feedback-based flow control**
 
 the other one is **rate-based flow control**
 
-> protocol has built-in mechanism to limit the sender's sending rate. 
+> protocol has built-in mechanism to limit the sender's sending rate.
+
+
