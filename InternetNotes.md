@@ -433,6 +433,14 @@ Data-Link Layer protocols defines how to encapsulate **packet** from network lay
 
 2. [Simplex Stop-and-Wait Protocol for Error-Free Connection](#simplex-stop-and-wait-protocol-for-error-free-connection)
 
+3. [Simplex Stop-and-Wait Protocol for Noisy Connection](#simplex-stop-and-wait-protocol-for-noisy-noisy-connection)
+
+4. [One-bit Sliding Window Protocol](#one-bit-sliding-window-protocol)
+
+5. [Go-Back-N Protocol](#go-back-n-protocol)
+
+6. [Selective Repeat Protocol](#selective-repeat-protocol)
+
 #### Utopia Simplex Protocol
 
 This protocol concerns nothing but the actual transfer, is unrealisti scenario.
@@ -473,4 +481,4 @@ Hence we would consider how many frames can fit into the channel as the frames a
 
 This could be calculated by **product the Bandwidth(bits/sec) with the one time propagation delay**, with this value named **BD**, and the max frames to fit inside this channel is **2BD + 1**.
 
-#### Selective Repeat
+#### Selective Repeat Protocol
