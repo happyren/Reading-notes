@@ -425,14 +425,48 @@ Calculating a number based on the information and appended to the information, a
 
 CRC is also known as polynomial code, it requires both sender and receiver agree on a generator, then if the receiver receives a code that cannot be fully divide by the generator, it means there is an error.
 
-### Flow Control
+### Protocols
+
+Data-Link Layer protocols defines how to encapsulate **packet** from network layer to **frame**, and it handles certain amount flow control and error control.
+
+#### Utopia Simplex Protocol
+
+This protocol concerns nothing but the actual transfer, is unrealisti scenario.
+
+#### Simplex Stop-and-Wait Protocol for Error-Free Connection 
+
+Considering flow control to preventing the sender flooding the receiver.
 
 Two major schemes, one is **feedback-based flow control**
 
 > receiver send feedback to allow sender to continue send packets, or tell it how receiver is going on processing packets.
 
+this requires at least a half-duplex channel to be implemented on.
+
 the other one is **rate-based flow control**
 
 > protocol has built-in mechanism to limit the sender's sending rate.
 
+#### Simplex Stop-and-Wait Protocol for Noisy Connection
 
+It could be adding timer to the sender, when the ack is not sent to the sender, and the timer is out, the sender will resend the frame. Problem is, scenarios exist that ack is lost so that the frame will be duplicated.
+
+1 bit of seq number is enough for ack this frame and the next frame.
+
+For this protocol, both sender and receiver should remember the next frame's seq, damaged ack is sent the same as the last good ack, and data is sent from the buffer.
+
+#### One-bit Sliding Window Protocol
+
+Sliding window protocol with the size of 1, which means all frames received must be in order.
+
+In a duplex connection, if both sides decide to send frame simultaneously, error will occur.
+
+#### Go-Back-N Protocol
+
+One-bit will decrease the bandwidth utilization, hence increase the bits so that the sender could (ideally) continuously sending the frames.
+
+Hence we would consider how many frames can fit into the channel as the frames are propagated from sender to the receiver.
+
+This could be calculated by **product the Bandwidth(bits/sec) with the one time propagation delay**, with this value named **BD**, and the max frames to fit inside this channel is **2BD + 1**.
+
+#### Selective Repeat
