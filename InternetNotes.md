@@ -429,6 +429,10 @@ CRC is also known as polynomial code, it requires both sender and receiver agree
 
 Data-Link Layer protocols defines how to encapsulate **packet** from network layer to **frame**, and it handles certain amount flow control and error control.
 
+1. [Utopia Simplex Protocol](#utopia-simplex-protocol)
+
+2. [Simplex Stop-and-Wait Protocol for Error-Free Connection](#simplex-stop-and-wait-protocol-for-error-free-connection)
+
 #### Utopia Simplex Protocol
 
 This protocol concerns nothing but the actual transfer, is unrealisti scenario.
