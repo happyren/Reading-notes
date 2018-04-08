@@ -481,4 +481,31 @@ Hence we would consider how many frames can fit into the channel as the frames a
 
 This could be calculated by **product the Bandwidth(bits/sec) with the one time propagation delay**, with this value named **BD**, and the max frames to fit inside this channel is **2BD + 1**.
 
+This is the max frames to be coexisted on the channel, due to it ingores the processing time and the ack frame length.
+
+Cumulative Ack means that the incoming of ACK N also ack the N-1, N-2.
+
 #### Selective Repeat Protocol
+
+Selective repeat improves the go back N by letting the sender only retransmit the error frame, it will normally send a negative ack to force the sender to retransmit without waiting for the expiry of the timer. And if the NACK is lost, the sender will only send the losing frame again.
+
+## Media Access Control Sublayer
+
+MAC sublayer is important in broadcasting network, important in LAN especially for wireless network.
+
+### Static Channel Allocation
+
+Frequency Division Multiplexing: for N users, channel is divided into N frequency bands, hence each user has its own band, without interfering
+
+### Dynamic Channel Allocation
+
+#### ALOHA and Slotted ALOHA
+
+ALOHA allows different stations sends the frames whenever they need to, a collision would leads to retransmission, it has the best output at expected frame = 0.5 with successful rate at 0.18.
+
+Slotted ALOHA requires stations send frames at the beginning of a slot, it has the best performance at expected frame = 1 with successful rate at almost 0.37.
+
+#### Carrier Sense Multiple Access Protocol
+
+- 1-persistent CSMA: when a station finds out the channel is busy, it will wait, when it sees it is idle, it will 100% sure start transmission.
+> Propagation delay would influence on it, 100% certainty of transmission is bad, if propagation delay is small, then collision possiblity is small.
