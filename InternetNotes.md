@@ -509,3 +509,7 @@ Slotted ALOHA requires stations send frames at the beginning of a slot, it has t
 
 - 1-persistent CSMA: when a station finds out the channel is busy, it will wait, when it sees it is idle, it will 100% sure start transmission.
 > Propagation delay would influence on it, 100% certainty of transmission is bad, if propagation delay is small, then collision possiblity is small.
+
+- nonpersistent CSMA: same as 1-persistent CSMA, only it will wait a random period of time till it start transmitting, but it adds delay.
+
+- p-persistent CSMA: used on slotted channel, when channel is idle, it has __p__ percent chance of transmitting, otherwise wait till the next slot.
