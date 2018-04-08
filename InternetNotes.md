@@ -517,3 +517,28 @@ Slotted ALOHA requires stations send frames at the beginning of a slot, it has t
 - CSMA with Collision Detection: when the collision happens, the stations detect it and stop transmission immediately, and it will wait 2 times propagation delay for the sender to ack the collision, hence the frame length would better be 2t.
 
 - CSMA with Collision Detection: when the collision happens, the stations detect it and stop transmission immediately, and it will wait 2 times propagation delay for the sender to ack the collision, hence the frame length would better be 2t.
+
+#### Collision-Free Protocol
+
+- Bit-map protocol: for channel of N contention, it will has N slots, for j station which has frame to send, it will transmit a 1 on j slot, and then by the slots, frames are transmitted. When the channel load are growing higher, the performance ioncreases.
+
+- Token Passing: only with the token, a station is allowed to send a frame. Also known as token bus.
+> There has been FDDI(Fiber Distributed Data Interface) and RPR(Resilient Packet Ring)
+
+- Binary Countdown: Since Bit-map and token passing both need 1 bit overhead, binary addressing could save a lot while there exist a lot stations. In this protocol, every bit time, if a station has frame to send, it will send its address, if sent 0 saw 1, the station will quit contention. The one with the final binary seq address will send the frame. A high numbered station has high priority.
+
+#### Limited Contention Protocol
+
+Use contention protocol at low load to save delay and collision-free at high load to increase efficiency.
+
+- Adaptive Tree Walk protocol: using depth-first tree to permit the transmission.
+
+#### Wireless LAN Protocol
+
+> Exposed and Hidden Terminal: A Hidden terminal is that a transmitting station that is beyond the range of the current station; a Exposed terminal is that a two transmitting station has no collision on receiver but can see each other transmitting.
+
+- MACA(Multiple Access with Collision Avoidance): Sender sends RTS(Request To Send) to stimulate the receiver to send a CTS(Clear To Send) to pause receiver nearby stations to stop transmitting, then the actual data frame is sent.
+
+### Ethernet
+
+Classic and switched ethernet.
