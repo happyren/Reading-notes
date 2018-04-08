@@ -513,3 +513,7 @@ Slotted ALOHA requires stations send frames at the beginning of a slot, it has t
 - nonpersistent CSMA: same as 1-persistent CSMA, only it will wait a random period of time till it start transmitting, but it adds delay.
 
 - p-persistent CSMA: used on slotted channel, when channel is idle, it has __p__ percent chance of transmitting, otherwise wait till the next slot.
+
+- CSMA with Collision Detection: when the collision happens, the stations detect it and stop transmission immediately, and it will wait 2 times propagation delay for the sender to ack the collision, hence the frame length would better be 2t.
+
+- CSMA with Collision Detection: when the collision happens, the stations detect it and stop transmission immediately, and it will wait 2 times propagation delay for the sender to ack the collision, hence the frame length would better be 2t.
