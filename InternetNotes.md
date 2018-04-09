@@ -606,3 +606,18 @@ Two kinds of routing algorithms: Adaptive and non-adaptive.
 #### The Optimality Principle
 
 If J is on the optimal route from I to K, then the optimal path from J to K is also on this path.
+
+### Internetworking
+
+| Item | Some Possibilities |
+| --- | :---: | 
+| Service Offered | Connectionless vs Connection Oriented|
+| Addressing | Different Size, Flat and Hierarchical |
+| Broadcasting | Present or Absent |
+| Packet Size | Depends on network |
+| Ordering | Ordered or Unordered Delivery |
+| QoS | Many different kinds |
+| Reliability | Different Level |
+| Security | Privacy Rules |
+| Parameters | Different Timeout |
+| Accounting | By connect time, packet |
