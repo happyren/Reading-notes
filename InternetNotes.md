@@ -598,3 +598,11 @@ Trade-offes:
 5. Router crashes leads to the loss of connection has significant effect on the connection-oriented service comparing to connectionless service.
 
 ### Routing Algorithm
+
+Datagram needs routing for every packet, but the VC needs one for setup session, hence it is also named as session routing.
+
+Two kinds of routing algorithms: Adaptive and non-adaptive.
+
+#### The Optimality Principle
+
+If J is on the optimal route from I to K, then the optimal path from J to K is also on this path.
