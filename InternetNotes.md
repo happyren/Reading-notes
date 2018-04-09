@@ -542,3 +542,23 @@ Use contention protocol at low load to save delay and collision-free at high loa
 ### Ethernet
 
 Classic and switched ethernet.
+
+## Network Layer
+
+Network Layer concerns how to get the packet to the destination, is the lowest layer of end to end transmission.
+
+- [Network Layer Design Issues](#network-layer-design-issues)
+
+- [Routing Algorithms](#routing-algorithms)
+
+- [Congestion Control Algorithms](#congestion-control-algorithms)
+
+- [Quality of Service](#quality-of-service)
+
+- [Internetworking](#internetworking)
+
+### Network Layer Design Issues
+
+#### Store-and-Forward Packet Switching
+
+The major components are the ISP(Internet Service Provider) devices and customer devices. These devices are used as the packet is stored until it has fully arrived and checksum finished, then it will be forward to the next router.
