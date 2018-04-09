@@ -582,3 +582,19 @@ The ISP router decides which is the next stop by a routing table, the routing ta
 #### Connection-oriented
 
 Label switching is the machanism used in this service, when a ISP router sees a packet from Host 1 with label 1, it will label it with identifier 1 and route it to the next router, any other connection from other host or head different destination will be assign different identifier.
+
+#### Datagram vs Virtual-Circuit
+
+Trade-offes:
+
+1. Setup time vs Address parsing time
+
+2. Destination address used in datagram are longer than circuit numbers used in VC because they have a global meaning.
+
+3. Amount required in router memory.
+
+4. Scenario based connection.
+
+5. Router crashes leads to the loss of connection has significant effect on the connection-oriented service comparing to connectionless service.
+
+### Routing Algorithm
