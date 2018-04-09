@@ -562,3 +562,23 @@ Network Layer concerns how to get the packet to the destination, is the lowest l
 #### Store-and-Forward Packet Switching
 
 The major components are the ISP(Internet Service Provider) devices and customer devices. These devices are used as the packet is stored until it has fully arrived and checksum finished, then it will be forward to the next router.
+
+#### Service Provided
+
+1. The services should be independent of the router technology.
+
+2. The transport layer shold be shielded from the number, type, and topology of the router.
+
+3. The network address made available to the transport layer should use a uniform numbering plan, even across LAN and WAN.
+
+These leads to the argue that whether the network layer should provide connection-oriented or connectionless services.
+
+For one side, routers' job is moving the packets around, hence connectionless, and for the other side, it is said that a connection ensures quality of services.
+
+#### Connectionless
+
+The ISP router decides which is the next stop by a routing table, the routing table gives the next stop by the final destination, and the routing table is managed by the routing algorithm.
+
+#### Connection-oriented
+
+Label switching is the machanism used in this service, when a ISP router sees a packet from Host 1 with label 1, it will label it with identifier 1 and route it to the next router, any other connection from other host or head different destination will be assign different identifier.
