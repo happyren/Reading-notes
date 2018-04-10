@@ -50,9 +50,9 @@ Cellular, WiFi, GPS, etc.
 Generally, there are two type transmission technology in daily usage.
 
 > Broadcast link: Packet coubld be sent by any machine and recieved by all the others. Machine only process packets intended to be received but drop those do not.
-
+---
 > Multicasting: packets are transmitted to subset of machines.
-
+---
 > Point-to-point link: Packet is sent by exactly one sender and received by exactly one receiver.
 
 And the technology could also be categorized by scale:
@@ -92,7 +92,6 @@ WAN spans large geo area, it consists of hosts and communication subnet, which r
 Subnets could also be or not to be a Internet Subnet, and the service providers could vary for a **Network Service Provider** to **Internet Service Provider**.
 
 > The method IPS choosing path called routing, choosing destination called forwarding.
-
 
 ## OSI model
 
@@ -267,7 +266,6 @@ Mostly, fibers are winning, but satellites have pros:
 
 3. more suitable for broadcasting.
 
-
 ## Data-Link Layer
 
 This layer has three objective:
@@ -336,7 +334,7 @@ The popular method is to include a long string called **preamble**, which starts
 
 There are two mean method, adding **error correcting code** and **error detecting code**.
 
-> **error correcting code** or **FEC** is used in noisy channels because resend could likely be errors again. 
+> **error correcting code** or **FEC** is used in noisy channels because resend could likely be errors again.
 
 bit flip is harder than erasure channel.
 
@@ -380,7 +378,7 @@ For Wi-Fi, there should be 6 memory registers, when 111 input in, 000000 -> 1000
 
 > To decode the convolutional code is to find the input sequence that is most likely to generate the output bits. Viterbi Algorithm is used in this codes.
 
-Using Viterbi algorithm error correcting and working with uncertain bits is **soft-decision decoding**, deciding which bits the signal is before error correcting is called **hard-decision decoding**. 
+Using Viterbi algorithm error correcting and working with uncertain bits is **soft-decision decoding**, deciding which bits the signal is before error correcting is called **hard-decision decoding**.
 
 #### Reed-Solomon Codes
 
@@ -403,6 +401,7 @@ While decoding, it will use an approximation algorithm to iteratively improves t
 > Very high error correcting ability, outperform above codes, and widely used in new protocols.
 
 ---
+
 1. [Parity](#parity)
 
 2. [Checksums](#checksums)
@@ -445,7 +444,7 @@ Data-Link Layer protocols defines how to encapsulate **packet** from network lay
 
 This protocol concerns nothing but the actual transfer, is unrealisti scenario.
 
-#### Simplex Stop-and-Wait Protocol for Error-Free Connection 
+#### Simplex Stop-and-Wait Protocol for Error-Free Connection
 
 Considering flow control to preventing the sender flooding the receiver.
 
@@ -615,12 +614,32 @@ If J is on the optimal route from I to K, then the optimal path from J to K is a
 
 Examine adjcent nodes of current working nodes, assign distance, then, after examine all the adjcent nodes, if the path is the shortest to this node, then made the label permenant, and using the one node with the smallest label as the new working node.
 
+#### Flooding
+
+Every packet is sent out on every path except for the one it arrived on.
+
+#### Distance Vector Routing
+
+#### Link State Routing
+
+#### Hierachical Routing
+
+#### Broadcast Routing
+
+#### Multicast Routing
+
+#### Anycast Routing
+
+#### Routing for Mobile Hosts
+
+#### Routing in Ad Hoc  Networks
+
 ---
 
 ### Internetworking
 
 | Item | Some Possibilities |
-| --- | :---: | 
+| --- | :---: |
 | Service Offered | Connectionless vs Connection Oriented|
 | Addressing | Different Size, Flat and Hierarchical |
 | Broadcasting | Present or Absent |
