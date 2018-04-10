@@ -557,6 +557,8 @@ Network Layer concerns how to get the packet to the destination, is the lowest l
 
 - [Internetworking](#internetworking)
 
+---
+
 ### Network Layer Design Issues
 
 #### Store-and-Forward Packet Switching
@@ -597,7 +599,9 @@ Trade-offes:
 
 5. Router crashes leads to the loss of connection has significant effect on the connection-oriented service comparing to connectionless service.
 
-### Routing Algorithm
+---
+
+### Routing Algorithms
 
 Datagram needs routing for every packet, but the VC needs one for setup session, hence it is also named as session routing.
 
@@ -606,6 +610,12 @@ Two kinds of routing algorithms: Adaptive and non-adaptive.
 #### The Optimality Principle
 
 If J is on the optimal route from I to K, then the optimal path from J to K is also on this path.
+
+#### Shortest Path Algorithm
+
+Examine adjcent nodes of current working nodes, assign distance, then, after examine all the adjcent nodes, if the path is the shortest to this node, then made the label permenant, and using the one node with the smallest label as the new working node.
+
+---
 
 ### Internetworking
 
