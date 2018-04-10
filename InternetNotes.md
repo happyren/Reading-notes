@@ -618,6 +618,12 @@ Examine adjcent nodes of current working nodes, assign distance, then, after exa
 
 Every packet is sent out on every path except for the one it arrived on.
 
+> Hop counter: it is used to countdown for a fixed length of the packet can be hopped around, it the counter counts down to 0, the packet is discarded. This avoids the infinite hop of a packet in the network.
+---
+> Another method is to avoid flooding a packet has been flooded by using a packet seq with source machine.
+
+It is good to be used on the broadcast network and very robust.
+
 #### Distance Vector Routing
 
 #### Link State Routing
