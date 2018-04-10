@@ -626,6 +626,8 @@ It is good to be used on the broadcast network and very robust.
 
 #### Distance Vector Routing
 
+
+
 #### Link State Routing
 
 #### Hierachical Routing
