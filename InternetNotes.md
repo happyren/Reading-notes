@@ -632,6 +632,16 @@ For current working router, its neighbors will report their delay to destination
 
 #### Link State Routing
 
+1. Learning about the neighbours:
+
+2. Setting Link Costs:
+
+3. Building Link State Packets:
+
+4. Distributing the LSP:
+
+5. Computing the New Routes:
+
 #### Hierachical Routing
 
 #### Broadcast Routing
