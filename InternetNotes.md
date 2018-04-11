@@ -626,7 +626,9 @@ It is good to be used on the broadcast network and very robust.
 
 #### Distance Vector Routing
 
+For current working router, its neighbors will report their delay to destination as X, and the router itself holds the delay to the neighbors as m, by calc X+m, a minimum value will be the shortest route.
 
+> Convergence: Good news propagates quickly, bad news take a very long time.
 
 #### Link State Routing
 
