@@ -44,6 +44,11 @@
 
 ### Elementary Graph Algorithms
 
+1. [Graph representation](#graph-representation)
+
+2. [Breadth-First Search](#breadth-first-search)
+
+#### Breadth-First Search
 ---
 
 ## Selected Topics
