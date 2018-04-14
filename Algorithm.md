@@ -40,6 +40,10 @@
 
 ## Graph Algorithms
 
+- [Elementary Graph Algorithms](#elementary-graph-algorithms)
+
+### Elementary Graph Algorithms
+
 ---
 
 ## Selected Topics
