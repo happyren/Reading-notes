@@ -1,9 +1,49 @@
-# Algorithms
+# Introducion to algorithms
 
-## Sort
+- [Foundations](#foundations)
 
-### Brutal Force
+- [Sorting and Order Statistics](#sorting-and-order-statistics)
 
-#### Selection Sort
+- [Data Structures](#data-structures)
 
-Scan through the array, select the smallest item, put it into the first position, then do it again, find the second smallest one.
+- [Advanced Design and Analysis Techniques](#advanced-design-and-analysis-techniques)
+
+- [Advanced Data Structures](#advanced-data-structures)
+
+- [Graph Algorithms](#graph-algorithms)
+
+- [Selected Topics](#selected-topics)
+
+- [Mathematical Background](#mathematical-background)
+
+---
+
+## Foundations
+
+---
+
+## Sorting and Order Statistics
+
+---
+
+## Data Structures
+
+---
+
+## Advanced Design and Analysis Techniques
+
+--- 
+
+## Advanced Data Structures
+
+---
+
+## Graph Algorithms
+
+---
+
+## Selected Topics
+
+---
+
+## Mathematical Background
