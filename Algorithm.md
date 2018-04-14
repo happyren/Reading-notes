@@ -49,6 +49,10 @@
 2. [Breadth-First Search](#breadth-first-search)
 
 #### Breadth-First Search
+
+Function BFS(G<V,E>)
+	
+
 ---
 
 ## Selected Topics
