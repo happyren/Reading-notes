@@ -94,6 +94,15 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 > The method IPS choosing path called routing, choosing destination called forwarding.
 
+### Network Devices
+
+| Devices | Usage |
+| :---: | : ---: |
+| Repeater | Regenerates the signal to keep transmission strength|
+| Hub | A multiport repeater |
+| Bridge | On Data-Link Layer, filtering contents by reading MAC, connect 2 devices|
+
+
 ## Hybrid Model
 
 Hybrid model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
