@@ -555,7 +555,7 @@ Use contention protocol at low load to save delay and collision-free at high loa
 
 ### Ethernet
 
-Classic and switched ethernet.
+Classic and switched ethernet: Classic Ethernet solves multiple access as above, switched network uses a switch device.
 
 ## Network Layer
 
