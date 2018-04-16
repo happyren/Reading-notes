@@ -4,7 +4,7 @@
 
 ## Contents
 
-- [OSI model](#osi-model)
+- [Hybrid model](#hybrid-model)
 - [Why Internet](#why-internet)
 
 ## Why Internet
@@ -94,9 +94,9 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 > The method IPS choosing path called routing, choosing destination called forwarding.
 
-## OSI model
+## Hybrid Model
 
-OSI model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
+Hybrid model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
 
 - Application layer
 
