@@ -27,7 +27,7 @@ Setting up computer network in business normally has goals:
 
 The biggest reason for home to buy personal computer is to connect to the Internet. And the connection is often processed in peer-to-peer model.
 
-> Peer-to-peer model: individuals form a loose group and make communication within the group.![Peer-to-peer](https://geekipedia.info/wp-content/uploads/peer-to-peer-network.png)
+> Peer-to-peer model: individuals form a loose group and make communication within the group.![Peer-to-peer](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/P2P-network.svg/2000px-P2P-network.svg.png)
 
 Home internet is often setup due to:
 
