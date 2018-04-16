@@ -1,6 +1,6 @@
 # Internet Technology
 
-> Internet Technology Note sheet, based on __Computer Network Pearson.2011__
+> Internet Technology Note sheet, based on _Computer Network Pearson.2011_
 
 ## Contents
 
