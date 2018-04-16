@@ -289,7 +289,7 @@ This layer has three objective:
 
 2. [Dealing with transmission error.](#error-control)
 
-3. [Flow control](#flow-control)
+3. [Flow control](#protocols)
 
 Three acknowledgment scheme:
 
