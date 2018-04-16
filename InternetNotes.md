@@ -141,6 +141,10 @@ All physical stuff connect the computers together. Most of network problem comes
 
 ## Physical Layer
 
+- [Nyquist Theorem](#nyquist-theorem-maximum-data-rate-of-a-channel)
+- [Guided Media](#guided-media)
+- [Unguided Media](#unguided-media)
+
 Firstly, using electronics cannot generates actual digital signal directly, because it exists break point, which violates the natural law of electricity. So instead, digital signal is decomposed into different possible signals, which is harmonic signal (sin and cos) with different frequency.
 
 From the actual transmission, some frequency of signal may be attenuated, so there exist a cutoff frequency that defines how many frequencies are actually useful while transmitting, and from the lowest frequency to the highest frequency of the signal components are called bandwidth.
