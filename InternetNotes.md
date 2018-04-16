@@ -56,6 +56,7 @@ Generally, there are two type transmission technology in daily usage.
 > Point-to-point link: Packet is sent by exactly one sender and received by exactly one receiver.
 
 And the technology could also be categorized by scale:
+
 | Distance | Density | Example |
 | ------------------ |:-------:|:-------:|
 | 1 m | Square Meter | Personal Area Network|
