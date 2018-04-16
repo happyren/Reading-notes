@@ -97,7 +97,7 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 ### Network Devices
 
 | Devices | Usage |
-| :---: | : ---: |
+| --- | : ---: |
 | Repeater | Regenerates the signal to keep transmission strength|
 | Hub | A multiport repeater |
 | Bridge | On Data-Link Layer, filtering contents by reading MAC, connect 2 devices|
