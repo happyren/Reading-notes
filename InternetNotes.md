@@ -101,6 +101,10 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 | Repeater | Regenerates the signal to keep transmission strength|
 | Hub | A multiport repeater |
 | Bridge | On Data-Link Layer, filtering contents by reading MAC, connect 2 devices|
+| Switch | Multiport Bridge with buffer |
+| Router | Network Layer device, like switch, but can read IP address |
+| Gateway | a passage to connect two networks together with both using different models |
+| Access Point | Providing Wireless Connection for devices to Ethernet network |
 
 
 ## Hybrid Model
