@@ -50,7 +50,6 @@
 
 #### Breadth-First Search
 
-$ Function BFS(G<V,E>) $
 
 ---
 
