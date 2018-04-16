@@ -102,13 +102,6 @@ Hybrid model comes from top to bottom, from the layer closest to user (Which is 
 
 This is the one that the **user actually interacting with**, like safari, chrome, or outlook application.
 
-- Presentation layer
-
-This is the one that **operating system is on**, information user input on application layer will be sent to presentation layer to the operating system to be further processed.
-
-- Session layer
-
-This one deals with the communication session between two computers. **It creates session with the web server which user would like to get data from**
 
 - Transport layer
 
@@ -117,6 +110,10 @@ This layer decides the data size of one transmission.
 - [Network layer](#network-layer)
 
 The router operates on this layer. Assign IP address to a certain MAC address or a certain NIC.
+
+- [Media Access Control Sublayer](#media-access-control-sublayer)
+
+One of the sublayer of Data-Link Layer(the other one is logic link control), in charge of assignment of the MAC address.
 
 - [Data Link layer](#data-link-layer)
 
