@@ -12,6 +12,7 @@
 - [Internet Usage](#internet-usage)
 - [Hardware Technology](#hardware-technology)
 - [Software Technology](#software-technology)
+- [Reference Model](#reference-model)
 
 ### Internet Usage
 
@@ -114,6 +115,12 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 ### Software Technology
 
+* [Protocol Hierarchy](#protocol-hierarchy)
+* [Design Issues](#design-issues)
+* [CO vs CL](#co-vs-cl-interms-of-services)
+* [Service Primitives](#service-primitives)
+* [Services to Protocols](#services-to-protocols)
+
 #### Protocol Hierarchy
 
 **Protocol** is an agreement between peers on how communication is proceed.
@@ -176,7 +183,15 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 
 ### Reference Model
 
+* [OSI Model](#osi-model)
+* [TCP/IP Model](#tcp-ip-model)
+* [Hybrid Model](#hybrid-model)
+
+**Reference Models** are essentially architecture of networks, OSI(Open Systems Interconnection) is a good model, very general and still valid; TCP/IP its model is not of much use, but its protocols are still widely used.
+
 #### OSI Model
+
+
 
 #### TCP/IP Model
 
@@ -193,11 +208,11 @@ This is the one that the **user actually interacting with**, like safari, chrome
 
 This layer decides the data size of one transmission.
 
-- [Network layer](#network-layer)
+- [Network layer(Unfinished Reading)](#network-layer)
 
 The router operates on this layer. Assign IP address to a certain MAC address or a certain NIC.
 
-- [Media Access Control Sublayer](#media-access-control-sublayer)
+- [Media Access Control Sublayer(Readings on example networks are unfinished)](#media-access-control-sublayer)
 
 One of the sublayer of Data-Link Layer(the other one is logic link control), in charge of assignment of the MAC address.
 
