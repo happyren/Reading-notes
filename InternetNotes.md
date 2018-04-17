@@ -186,6 +186,7 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 * [OSI Model](#osi-model)
 * [TCP/IP Model](#tcpip-model)
 * [Hybrid Model](#hybrid-model)
+* [OSI vs TCP/IP](#osi-vs-tcpip)
 
 **Reference Models** are essentially architecture of networks, OSI(Open Systems Interconnection) is a good model, very general and still valid; TCP/IP its model is not of much use, but its protocols are still widely used.
 
@@ -219,6 +220,15 @@ Design Principles:
 
 #### TCP/IP Model
 
+A goal is to connect multiple networks in a seamless way, and another goal is the network could survive loss of subnet hardware(connection should be good as long as the source and destination machines are functioning.)
+
+4 Layers:
+
+- Link Layer: describes what links must do to meet the needs of the connectionless internet layer.
+- Internet Layer: permit hosts to inject packets into any networks and have themn travel independently to the destination(IP and ICMP).
+- Transport Layer: allow peers on source and destination hosts to carry on a conversation(TCP for CO, UDP for CL).
+- Application Layer: includes session and presentation layers, contains all the high level protocols(session layer and presentation layer has little use to most applications, proven by the experience of OSI model.)
+
 #### Hybrid Model
 
 Hybrid model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
@@ -250,6 +260,18 @@ All physical stuff connect the computers together. Most of network problem comes
 
 - cable disconnect
 - cable misconnect
+
+#### OSI vs TCP/IP
+
+OSI has contributing three vital concepts: Services, Interfaces, Protocols. Each layer provide services to upper layer, interface tells process above it how to access it, and the protocol connecting the same layer on the peer.
+
+TCP/IP did not originally clearly distinguish between services, interfaces, and protocols.
+
+|CO vs CL|
+| --- | :---: |
+| OSI | TCP/IP |
+| Both in network Layer | Both in transport layer |
+| CO in transport layer | CL in network layer |
 
 ## Physical Layer
 
