@@ -118,7 +118,16 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 #### Design Issues
 
-#### CO vs CL
+#### CO vs CL (Interms of services)
+
+| CO or CL | Services | Example |
+| --- | :---: | :---: |
+| CO | Reliable message stream | Sequence of pages |
+| CO | Reliable byte stream | Movie download |
+| CO | Unreliable connection | Voice of IP |
+| CL | Unreliable datagram | Electronic junk mail |
+| CL | Acknowledged datagram | Text messaging |
+| CL | Request-reply | Database query |
 
 #### Service Primitives
 
