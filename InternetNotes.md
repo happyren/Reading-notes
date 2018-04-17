@@ -5,11 +5,17 @@
 ## Contents
 
 - [Hybrid model](#hybrid-model)
-- [Why Internet](#why-internet)
+- [Why Internet](#introduction)
 
-## Why Internet
+## Introduction
 
-### For business
+- [Internet Usage](#internet-usage)
+- [Hardware Technology](#hardware-technology)
+- [Software Technology](#software-technology)
+
+### Internet Usage
+
+#### For business
 
 Sharing data amongst employees are necessary. At a point of resource sharing, the management would like to connect all the private employee computers together. It normally deployed in **client-server model**.
 
@@ -23,7 +29,7 @@ Setting up computer network in business normally has goals:
 
 3. Doing business electronically, especially with customers.
 
-### Home Application
+#### Home Application
 
 The biggest reason for home to buy personal computer is to connect to the Internet. And the connection is often processed in peer-to-peer model.
 
@@ -41,18 +47,18 @@ Home internet is often setup due to:
 
 5. Ubiquitous computing in Internet of Things, RFID.
 
-### Mobile users
+#### Mobile users
 
 Cellular, WiFi, GPS, etc.
 
-## Harware Technology
+### Harware Technology
 
 Generally, there are two type transmission technology in daily usage.
 
 > Broadcast link: Packet coubld be sent by any machine and recieved by all the others. Machine only process packets intended to be received but drop those do not.
----
+
 > Multicasting: packets are transmitted to subset of machines.
----
+
 > Point-to-point link: Packet is sent by exactly one sender and received by exactly one receiver.
 
 And the technology could also be categorized by scale:
@@ -68,11 +74,11 @@ And the technology could also be categorized by scale:
 | 1000 km | Continent | WAN |
 | 10,000 km | Planet | Internet |
 
-### PAN
+#### PAN
 
 Let devices communicates over a range of a person. For example, computer with monitor, keyboard, and mice, cable or bluetooth.
 
-### LAN
+#### LAN
 
 Privately owned network operates within and nearby an office, home, or building , or factory. It requires Access Point, or wireless router, or base station. Protocol _IEEE 802.11_ is widely known as **WiFi**, while _IEEE 802.3_ is widely known as **Ethernet**. Logical divided LAN is also possible, which is Virtual LAN or VLAN.
 
@@ -82,11 +88,11 @@ In LAN, since the size is restricted, we could know the worst case scenario in a
 
 - Dynamic allocation: Centralized allocation would have a central entity which determines using an algorithm to decide which packet goes next, where the decentralized allocation doesn't have that central entity but using each machine to decide when to send the packet.
 
-### MAN
+#### MAN
 
 MAN is firstly using by television channels, to distribute TV to subs, then it is found the cable could carry more channels, so Internet is also included.
 
-### WAN
+#### WAN
 
 WAN spans large geo area, it consists of hosts and communication subnet, which requires transmission cable and switch elements. Compares to LAN, it separates communication and application for easy deployment. It utilizes multiple network technologies. And its subnet could connect to not only individual computers but also LANs.
 
@@ -94,7 +100,7 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 > The method IPS choosing path called routing, choosing destination called forwarding.
 
-### Network Devices
+#### Network Devices
 
 | Devices | Usage |
 | --- | :---: |
@@ -106,8 +112,25 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 | Gateway | a passage to connect two networks together with both using different models |
 | Access Point | Providing Wireless Connection for devices to Ethernet network |
 
+### Software Technology
 
-## Hybrid Model
+#### Protocol Hierarchy
+
+#### Design Issues
+
+#### CO vs CL
+
+#### Service Primitives
+
+#### Services to Protocols
+
+### Reference Model
+
+#### OSI Model
+
+#### TCP/IP Model
+
+#### Hybrid Model
 
 Hybrid model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
 
