@@ -638,6 +638,14 @@ Cumulative Ack means that the incoming of ACK N also ack the N-1, N-2.
 
 Selective repeat improves the go back N by letting the sender only retransmit the error frame, it will normally send a negative ack to force the sender to retransmit without waiting for the expiry of the timer. And if the NACK is lost, the sender will only send the losing frame again.
 
+#### Example Protocol
+
+PPP(Point-to-Point Protocol): improved on SLIP(Serial Link Internet Protocol), provides features:
+
+1. Framing method delineates the start and end of a frame, also deal with error detection.
+2. LCP(Link Control Protocol) brings up connection, test it, negotiate options, and bring down the connection.
+3. NCP(Network Control Protocol) negotiate network-layer option independent from the network layer protocol being used.
+
 ## Media Access Control Sublayer
 
 MAC sublayer is important in broadcasting network, important in LAN especially for wireless network.
