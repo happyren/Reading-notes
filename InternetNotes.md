@@ -646,6 +646,16 @@ PPP(Point-to-Point Protocol): improved on SLIP(Serial Link Internet Protocol), p
 2. LCP(Link Control Protocol) brings up connection, test it, negotiate options, and bring down the connection.
 3. NCP(Network Control Protocol) negotiate network-layer option independent from the network layer protocol being used.
 
+Frame format close to HDLC(High-level Data Link Control):
+
+- 1 byte Header Flag
+- 1 byte Address (LCP negotiation can omit it)
+- 1 byte Control (LCP negotiation can omit it)
+- 2-4 bytes Protocols (LCP negotiation can bring down to 2)
+- payload
+- 2-4 Checksum (LCP negotiation can bring up to 4)
+- 1 byte Trailer Flag
+
 ## Media Access Control Sublayer
 
 MAC sublayer is important in broadcasting network, important in LAN especially for wireless network.
