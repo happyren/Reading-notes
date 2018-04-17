@@ -138,6 +138,12 @@ Protocol stack is the list of protocols used in different layers, one per layer.
 
 #### CO vs CL (Interms of services)
 
+CO is modeled after telephone system, CL is modeled after postal system.
+
+> Store-and-forward switching: intermediate node receive the whole message, then send it.
+
+> cut-through switching: onward transmission starts before the message is fully received.
+
 | CO or CL | Services | Example |
 | --- | :---: | :---: |
 | CO | Reliable message stream | Sequence of pages |
