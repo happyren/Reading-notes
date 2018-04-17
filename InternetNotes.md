@@ -191,6 +191,7 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 
 #### OSI Model
 
+Based on proposal developed by ISO, as the first step to international standardization of the protocols used in the various layers.
 
 
 #### TCP/IP Model
