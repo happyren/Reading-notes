@@ -267,9 +267,10 @@ OSI has contributing three vital concepts: Services, Interfaces, Protocols. Each
 
 TCP/IP did not originally clearly distinguish between services, interfaces, and protocols.
 
-|CO vs CL|
-| --- | :---: |
+> CO vs CL
+
 | OSI | TCP/IP |
+| --- | :---: |
 | Both in network Layer | Both in transport layer |
 | CO in transport layer | CL in network layer |
 
