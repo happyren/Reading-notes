@@ -164,7 +164,15 @@ CO is modeled after telephone system, CL is modeled after postal system.
 | SEND | Send a message to the peer |
 | DISCONNECT | Terminate the connection |
 
+LISTEN, CONNECT, ACCEPT could be explained by 3-way handshake.
+
+RECEIVE and SEND could be explained by HTTP transmission.
+
+DISCONNECT could be explained by 2 pairs of DISCONNECT and ACK.
+
 #### Services to Protocols
+
+Service is not protocol, **service** is premitive operations a lower layer provides to its upper layer; **protocol** is the agreement between two communication peer on how communication is proceed.
 
 ### Reference Model
 
