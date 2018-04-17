@@ -142,7 +142,7 @@ CO is modeled after telephone system, CL is modeled after postal system.
 
 > Store-and-forward switching: intermediate node receive the whole message, then send it.
 
-> cut-through switching: onward transmission starts before the message is fully received.
+> Cut-through switching: onward transmission starts before the message is fully received.
 
 | CO or CL | Services | Example |
 | --- | :---: | :---: |
@@ -154,6 +154,15 @@ CO is modeled after telephone system, CL is modeled after postal system.
 | CL | Request-reply | Database query |
 
 #### Service Primitives
+
+| Primitive | Meaning |
+| --- | :---: |
+| LISTEN | Block waiting for an incoming connection |
+| CONNECT | Establish a connection with a waiting peer |
+| ACCEPT | Accept an incoming connection from a peer |
+| RECEIVE | Block waiting for an incoming message |
+| SEND | Send a message to the peer |
+| DISCONNECT | Terminate the connection |
 
 #### Services to Protocols
 
