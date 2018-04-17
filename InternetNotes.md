@@ -207,6 +207,16 @@ Design Principles:
 	1. large enough that distict functions need not to be thrown together in the same layer out of necessity.
 	2. small enough that the architecture does not become unwieldy(oversized).
 
+7 Layers:
+
+- Physical Layer: concerned with transmitting raw bits over a communication channel.
+- Data-Link Layer: transform a "raw transmission facility"(physical line) into a "line"(wire) that appears free of undetected transmission error.
+- Network Layer: controls the operation of subnet(routing).
+- Transport Layer: accept data above it, split it up if necessary, pass to the network layer, make sure pieces arrive correctly on the other side.
+- Session Layer: allow peers to estabish sessions between them, including dialog control(turns), token management, synchronization.
+- Presentation Layer: concern with syntax and semantics of the information transmitted.
+- Application Layer: contains a variety of protocols that commonly needed by users(HTTP).
+
 #### TCP/IP Model
 
 #### Hybrid Model
