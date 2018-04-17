@@ -526,6 +526,22 @@ A Convolutional codes is specified by its rate and constraint length.
 
 For Wi-Fi, there should be 6 memory registers, when 111 input in, 000000 -> 100000 -> 110000 -> 111000, and 7 bits input is required to wipe out all previous input, hence k=7.
 
+| bit 1 | bit 2|
+| --- | :---: |
+| in | in |
+| 2 -> 3 | 1 -> 2 |
+| 3 -> 4 | 2 -> 3 |
+| 4 -> 5 | 3 -> 4 |
+| 5 -> 6 | 4 -> 5 |
+| 6 -> out | 6 -> out |
+
+Hence input '111':
+
+1. in = 1, state = 000000, bit 1 = 1, bit 2 = 1;
+2. in = 1, state = 100000, bit 1 = 1, bit 2 = 0(1 XOR 1);
+3. in = 1, state = 110000, bit 1 = 1(1 XOR 1), bit 2 = 1(1 XOR 1 XOR 1);
+
+
 > To decode the convolutional code is to find the input sequence that is most likely to generate the output bits. Viterbi Algorithm is used in this codes.
 
 Using Viterbi algorithm error correcting and working with uncertain bits is **soft-decision decoding**, deciding which bits the signal is before error correcting is called **hard-decision decoding**.
