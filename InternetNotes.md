@@ -193,6 +193,19 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 
 Based on proposal developed by ISO, as the first step to international standardization of the protocols used in the various layers.
 
+Design Principles:
+
+1. A layer should be created where a different abstraction is needed.
+
+2. Each layer should perform a well-defined function.
+
+3. The function of each layer should be chosen, with an eye toward "defining internationally standardized protocols".
+
+4. The layer boundaries should be chosen to minimize the information flow across the interfaces.(PoLP)
+
+5. The number of layers should be:
+	1. large enough that distict functions need not to be thrown together in the same layer out of necessity.
+	2. small enough that the architecture does not become unwieldy(oversized).
 
 #### TCP/IP Model
 
