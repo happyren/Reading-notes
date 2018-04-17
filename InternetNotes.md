@@ -4,8 +4,8 @@
 
 ## Contents
 
-- [Hybrid model](#hybrid-model)
-- [Why Internet](#introduction)
+- [Introduction To Internet](#introduction)
+- [Hybrid Model(Major Chapters)](#hybrid-model)
 
 ## Introduction
 
