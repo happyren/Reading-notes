@@ -116,7 +116,25 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 #### Protocol Hierarchy
 
+**Protocol** is an agreement between peers on how communication is proceed.
+
+Actual data transmission is proceed on Physical Layer.
+
+Between each pair of adjacent layers, there exist a interface, where lower layer provides premitive operations and services to upper layer.
+
+Interface and layers should be properly designed, meet the _PoLP_, any change to the lower layer should not be noticed by the upper layer.
+
+Protocol stack is the list of protocols used in different layers, one per layer.
+
 #### Design Issues
+
+1. Reliability: error detection, error correction, routing(path finding).
+
+2. Network evolution: protocol layering, addressing, internetworking, model scalability.
+
+3. Resource allocation: Statistical multiplexing, flow control, congestion, QoS.
+
+4. Security: confidentiality, authentication, integrity.
 
 #### CO vs CL (Interms of services)
 
