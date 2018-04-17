@@ -184,7 +184,7 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 ### Reference Model
 
 * [OSI Model](#osi-model)
-* [TCP/IP Model](#tcp/ip-model)
+* [TCP/IP Model](#tcpip-model)
 * [Hybrid Model](#hybrid-model)
 
 **Reference Models** are essentially architecture of networks, OSI(Open Systems Interconnection) is a good model, very general and still valid; TCP/IP its model is not of much use, but its protocols are still widely used.
