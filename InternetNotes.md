@@ -54,13 +54,13 @@ Cellular, WiFi, GPS, etc.
 
 ### Harware Technology
 
-Generally, there are two type transmission technology in daily usage.
+Generally, there are three type transmission technology in daily usage.
 
-> Broadcast link: Packet coubld be sent by any machine and recieved by all the others. Machine only process packets intended to be received but drop those do not.
+1. Broadcast link: Packet coubld be sent by any machine and recieved by all the others. Machine only process packets intended to be received but drop those do not.
 
-> Multicasting: packets are transmitted to subset of machines.
+2. Multicasting: packets are transmitted to subset of machines.
 
-> Point-to-point link: Packet is sent by exactly one sender and received by exactly one receiver.
+3. Point-to-point link: Packet is sent by exactly one sender and received by exactly one receiver.
 
 And the technology could also be categorized by scale:
 
@@ -115,11 +115,11 @@ Subnets could also be or not to be a Internet Subnet, and the service providers 
 
 ### Software Technology
 
-* [Protocol Hierarchy](#protocol-hierarchy)
-* [Design Issues](#design-issues)
-* [CO vs CL](#co-vs-cl-interms-of-services)
-* [Service Primitives](#service-primitives)
-* [Services to Protocols](#services-to-protocols)
+- [Protocol Hierarchy](#protocol-hierarchy)
+- [Design Issues](#design-issues)
+- [CO vs CL](#co-vs-cl-interms-of-services)
+- [Service Primitives](#service-primitives)
+- [Services to Protocols](#services-to-protocols)
 
 #### Protocol Hierarchy
 
@@ -147,9 +147,9 @@ Protocol stack is the list of protocols used in different layers, one per layer.
 
 CO is modeled after telephone system, CL is modeled after postal system.
 
-> Store-and-forward switching: intermediate node receive the whole message, then send it.
+- Store-and-forward switching: intermediate node receive the whole message, then send it.
 
-> Cut-through switching: onward transmission starts before the message is fully received.
+- Cut-through switching: onward transmission starts before the message is fully received.
 
 | CO or CL | Services | Example |
 | --- | :---: | :---: |
@@ -183,10 +183,10 @@ Service is not protocol, **service** is premitive operations a lower layer provi
 
 ### Reference Model
 
-* [OSI Model](#osi-model)
-* [TCP/IP Model](#tcpip-model)
-* [Hybrid Model](#hybrid-model)
-* [OSI vs TCP/IP](#osi-vs-tcpip)
+- [OSI Model](#osi-model)
+- [TCP/IP Model](#tcpip-model)
+- [Hybrid Model](#hybrid-model)
+- [OSI vs TCP/IP](#osi-vs-tcpip)
 
 **Reference Models** are essentially architecture of networks, OSI(Open Systems Interconnection) is a good model, very general and still valid; TCP/IP its model is not of much use, but its protocols are still widely used.
 
@@ -236,7 +236,6 @@ Hybrid model comes from top to bottom, from the layer closest to user (Which is 
 - Application layer
 
 This is the one that the **user actually interacting with**, like safari, chrome, or outlook application.
-
 
 - Transport layer
 
@@ -541,7 +540,6 @@ Hence input '111':
 2. in = 1, state = 100000, bit 1 = 1, bit 2 = 0(1 XOR 1);
 3. in = 1, state = 110000, bit 1 = 1(1 XOR 1), bit 2 = 1(1 XOR 1 XOR 1);
 
-
 > To decode the convolutional code is to find the input sequence that is most likely to generate the output bits. Viterbi Algorithm is used in this codes.
 
 Using Viterbi algorithm error correcting and working with uncertain bits is **soft-decision decoding**, deciding which bits the signal is before error correcting is called **hard-decision decoding**.
@@ -716,6 +714,14 @@ Use contention protocol at low load to save delay and collision-free at high loa
 
 - Adaptive Tree Walk protocol: using depth-first tree to permit the transmission.
 
+1. Slot 0(first Slot after a successful transmission), all stations are allowed to transfer.
+
+2. Slot 1, if contention happens in the Slot 0, then all stations under node 2 are allowed to compete in this slot.
+
+3. Slot 2, if contention happens in the Slot 1, then all stations under node 4 are allowed to compete in this slot.
+
+...
+
 #### Wireless LAN Protocol
 
 > Exposed and Hidden Terminal: A Hidden terminal is that a transmitting station that is beyond the range of the current station; a Exposed terminal is that a two transmitting station has no collision on receiver but can see each other transmitting.
@@ -725,6 +731,16 @@ Use contention protocol at low load to save delay and collision-free at high loa
 ### Ethernet
 
 Classic and switched ethernet: Classic Ethernet solves multiple access as above, switched network uses a switch device.
+
+#### Ethernet MAC sublayer protocol analysis
+
+1. first 8 bytes, 10101010(last byte of the 8 bytes is different, it is 10101011, which is _Start of the Frame_ delimiter), by the Manchester encoding, this sequence would generates a 10MHz square wave for 6.4 usec.
+
+2. the next 12 bytes contains 2 address, first is the destination address and the second is the source, the first bit of the address is **0** for ordinary address and **1** for Group address, which allows multiple stations to listen to a single address, which is multicasting, and if the address is all **1**, it is broadcasting. Source address is globally unique, assigned centrally by **IEEE**, first three bytes indicates the manufacturer, last three bytes are by manufacturer.
+
+3. Type of Length field, for Ethernet, type field tells the OS which protocol should the packet be handed in to, 0x0800 means IPv4; for IEEE 802.3, this field carrys the legth of the frame, which means a layering violation would be existed, and the extra header from LLC(Logical Link Control) has to be appended to use 8 bytes convey a 2 bytes protocol information for receiver to handle. After 97, IEEE says that all this field with a value greater than 1500(1536 = 0x600) is type, and smaller is length.
+
+4. Data, up to 1500 bytes, mostly constrained by the RAM price at that time.
 
 ## Network Layer
 
@@ -786,6 +802,18 @@ Trade-offes:
 
 ### Routing Algorithms
 
+- [The Optimality Principle](#the-optimality-principle)
+- [Shortest Path Algorithm](#shortest-path-algorithm)
+- [Flooding](#flooding)
+- [Distance Vector Routing](#distance-vector-routing)
+- [Link State Routing](#link-state-routing)
+- [Hierachical Routing](#hierachical-routing)
+- [Broadcast Routing](#broadcast-routing)
+- [Multicast Routing](#multicast-routing)
+- [Anycast Routing](#anycast-routing)
+- [Routing for Mobile Hosts](#routing-for-mobile-hosts)
+- [Routing in Ad Hoc Networks](#routing-in-ad-hoc-networks)
+
 Datagram needs routing for every packet, but the VC needs one for setup session, hence it is also named as session routing.
 
 Two kinds of routing algorithms: Adaptive and non-adaptive.
@@ -803,8 +831,8 @@ Examine adjcent nodes of current working nodes, assign distance, then, after exa
 Every packet is sent out on every path except for the one it arrived on.
 
 > Hop counter: it is used to countdown for a fixed length of the packet can be hopped around, it the counter counts down to 0, the packet is discarded. This avoids the infinite hop of a packet in the network.
----
-> Another method is to avoid flooding a packet has been flooded by using a packet seq with source machine.
+
+Another method is to avoid flooding a packet has been flooded by using a packet seq with source machine.
 
 It is good to be used on the broadcast network and very robust.
 
@@ -816,7 +844,7 @@ For current working router, its neighbors will report their delay to destination
 
 #### Link State Routing
 
-1. Learning about the neighbours:
+1. Learning about the neighbours: a router send a special **HELLO** packet on each point-to-point line, its neighbour is expected to send back a reply given its global unique name.
 
 2. Setting Link Costs:
 
