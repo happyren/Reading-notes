@@ -740,7 +740,7 @@ Classic and switched ethernet: Classic Ethernet solves multiple access as above,
 
 3. Type of Length field, for Ethernet, type field tells the OS which protocol should the packet be handed in to, 0x0800 means IPv4; for IEEE 802.3, this field carrys the legth of the frame, which means a layering violation would be existed, and the extra header from LLC(Logical Link Control) has to be appended to use 8 bytes convey a 2 bytes protocol information for receiver to handle. After 97, IEEE says that all this field with a value greater than 1500(1536 = 0x600) is type, and smaller is length.
 
-4. Data, up to 1500 bytes, mostly constrained by the RAM price at that time.
+4. Data, up to 1500 bytes, mostly constrained by the RAM price at that time, in addition to the MAX size of the frame, it also has a MIN size of a frame, first reason is that it a station may truncate the frame while detect collision, hene a garbage frame may be on the cable, Ethernet requires a MIN of 64 bytes frame to distinguish message from garbage, it should be from destination address to checksum, including both, contains 64 bytes, both address are 6 bytes, type field of 2 bytes, checksum of 4 bytes, leaves at most 46bytes padding while 0 message is transmitted, the second reason to have MIN length is while a message is too short, collision at the end of the transmission line does not have enough time to come back, and the sender might mistaken that transmission is successful.
 
 ## Network Layer
 
@@ -882,3 +882,11 @@ For current working router, its neighbors will report their delay to destination
 | Security | Privacy Rules |
 | Parameters | Different Timeout |
 | Accounting | By connect time, packet |
+
+#### Subnet
+
+> Subnet all 0s and all 1s: subnet all 0s are reserved for network, and all 1s are reserved for broadcasting, hence if three bits subnet, total subnet usable are 2^3-2 = 6.
+
+## Transport Layer
+
+### 
