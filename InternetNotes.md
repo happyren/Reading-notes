@@ -204,9 +204,7 @@ Design Principles:
 
 4. The layer boundaries should be chosen to minimize the information flow across the interfaces.(PoLP)
 
-5. The number of layers should be:
-	1. large enough that distict functions need not to be thrown together in the same layer out of necessity.
-	2. small enough that the architecture does not become unwieldy(oversized).
+5. The number of layers should be: large enough that distict functions need not to be thrown together in the same layer out of necessity; small enough that the architecture does not become unwieldy(oversized).
 
 7 Layers:
 
@@ -788,7 +786,7 @@ Label switching is the machanism used in this service, when a ISP router sees a 
 
 Trade-offes:
 
-1. Setup time vs Address parsing time
+1. Setup time vs Address parsing time: Virtual circuit takes longer to setup, but less time on actual address parsing.
 
 2. Destination address used in datagram are longer than circuit numbers used in VC because they have a global meaning.
 
@@ -801,6 +799,8 @@ Trade-offes:
 ---
 
 ### Routing Algorithms
+
+There are two processes within a router, one is determine when a packet arrives, what to do with it, this named forwarding; routing is the process that router setup a routing table, update its value, and find the path to transmit the packet!
 
 - [The Optimality Principle](#the-optimality-principle)
 - [Shortest Path Algorithm](#shortest-path-algorithm)
@@ -838,7 +838,7 @@ It is good to be used on the broadcast network and very robust.
 
 #### Distance Vector Routing
 
-For current working router, its neighbors will report their delay to destination as X, and the router itself holds the delay to the neighbors as m, by calc X+m, a minimum value will be the shortest route.
+For current working router, its neighbors will report their delay to destination as X, and the router itself holds the delay to the neighbors as m, by X+m, a minimum value will be the shortest route.
 
 > Convergence: Good news propagates quickly, bad news take a very long time.
 
@@ -888,5 +888,3 @@ For current working router, its neighbors will report their delay to destination
 > Subnet all 0s and all 1s: subnet all 0s are reserved for network, and all 1s are reserved for broadcasting, hence if three bits subnet, total subnet usable are 2^3-2 = 6. [Subnet all 0s and all 1s convention by CISCO](https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html)
 
 ## Transport Layer
-
-### 
