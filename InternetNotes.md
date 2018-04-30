@@ -840,31 +840,51 @@ It is good to be used on the broadcast network and very robust.
 
 For current working router, its neighbors will report their delay to destination as X, and the router itself holds the delay to the neighbors as m, by X+m, a minimum value will be the shortest route.
 
-> Convergence: Good news propagates quickly, bad news take a very long time.
+> Convergence: Good news propagates quickly, connection lost propagates take a very long time.
 
 #### Link State Routing
 
 1. Learning about the neighbours: a router send a special **HELLO** packet on each point-to-point line, its neighbour is expected to send back a reply given its global unique name.
 
-2. Setting Link Costs:
+2. Setting Link Costs: cost to neighbour is set automatically or by network operator. \* For largely expanded network, geo-distance could factor in delay, delay calculated by round trip time divided by 2.
 
-3. Building Link State Packets:
+3. Building Link State Packets: after information collected, link-state packet is built with **sender**, **sequence**, **age**, and **neighbour and cost**. \* These packets can either be built periodically or when significant event happens.
 
-4. Distributing the LSP:
+4. Distributing the LSP: **flodding** can be used, _seq_ is used to discard duplicated packets, _age_ is used to time out down router and prevent packets get lost and live too long. Refinements are, not send out received packets immediately, wait and see if there could be higher _seq_ packet arrives, if so, send out the new one; adding _SEND_ and _ACK_ field to pass the packets to where it needs to go, and acknowledge the sender avoid duplicates.
 
-5. Computing the New Routes:
+5. Computing the New Routes: once the full set of LSP is accumulated, the route is computed. From the same routers, there may exists different paths, like from A to B and B to A may be on different path.
+
+Link State Routing needs more computing and space comparing to Distance Vector Routing, however, it does not suffer from convergence problem.
 
 #### Hierachical Routing
 
+Hierachical routing divided the routers into regions, each router know its own region but has no idea of other regions. By Kamoun and Kleinrock, the optimal level for an N routers network is lnN.
+
 #### Broadcast Routing
+
+Multidestinational routing, to let each packet contains either a list of destinations or a bit map indicating desired destinations.
+
+Another prefered method called reverse path forward, which means if a packet is mean to destined to a router, it will pick on the path the packets normally come from that router.
 
 #### Multicast Routing
 
+Multicasting use same scheme as broadcasting, sending packets from a spanning tree, and by refining it, prune the spanning tree with **MOSPF (Multicast OSPF)** and **DVMRP (Distance Vector Multicast Routing Protocol)**. Or it could be using **core based tree** with **PIM (Protocol Independent Multicast)**
+
 #### Anycast Routing
+
+A packet is delivered to the nearest member of the group. It is useful when sometime the node want information can be get from anyone not just its connected node.
 
 #### Routing for Mobile Hosts
 
+Mobile hosts will tell home agent where it is then home agent would route the packet to it. The local address of the mobile host is called **care of address**, and the technology for home agent to routing the packet with an extra encapsulation is called tunneling.
+
 #### Routing in Ad Hoc  Networks
+
+In extrem cases, the router themselves are mobile, they act as both hosts and routers, then the network of routers happens to be near each other is **Ad Hoc Networks**, or **MANETs (Mobile Ad hoc Networks)**. A popular protocol would be **AODV (Ad hoc On-demand Distance Vector)** go through Route discovery and route maintenence.
+
+### Congestion Control Algorithms
+
+Congestion means that the network goes slow, packets delay and loss, or degraded due to the overwhelm amount of packets being transmitted.
 
 ---
 
