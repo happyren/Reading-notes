@@ -884,7 +884,44 @@ In extrem cases, the router themselves are mobile, they act as both hosts and ro
 
 ### Congestion Control Algorithms
 
-Congestion means that the network goes slow, packets delay and loss, or degraded due to the overwhelm amount of packets being transmitted.
+Congestion means that the network goes slow, packets delay and loss, or degraded due to the overwhelm amount of packets being transmitted. Two way congestion would happen, one is that the router memory is fulled, but adding more memory would only lead to worse result; another one is the network being too slow, the counter measure is to build up a faster network.
+
+Congestion control is not equal to flow control, one is on the network level, another is about a specific sender and receiver, despite the fact that they can both be handled by slow down the sender.
+
+- [Traffic-aware Routing](#traffic-aware-routing)
+- [Admission Control](#admission-control)
+- [Traffic Throuttling](#traffic-throuttling)
+- [Load Shedding](#load-shedding)
+
+#### Traffic-aware Routing
+
+Shift traffic to lightly loaded path, this could be done by including delay and queue into path weight, however, it might lead to oscillate routing table, refinement could be **multipath routing**, where multiple path could be chosen from a source to a destination; another one is shift traffic across the routes slowly enough that it is able to converge.
+
+However, it is not normally used right now to shift the load, but rather slowly changing input, which is **traffic engineering**.
+
+#### Admission Control
+
+This is normally used in Virtual-circuit Network, by not allowing VC to setup while the network cannot hold it and its load. By this way, a network needs to be described in terms of its average load and burst load, normally using **leaky bucket** or **token bucket**.
+
+Two common ways reserve enough capacity and how many VC will fit within the network without congestion.
+
+It can be used with traffic-aware routing.
+
+#### Traffic Throttling
+
+When detect a incoming congestion, feedback must be given to the sender to throttle the traffic output, handling to problems, one is how to distinguish a congestion is going to happen, the other one is that the router must deliver the timely feedback to the sender may cause the congestion.
+
+##### Chock Packet
+
+Notify the sender of congested packet with a chock packet destinated to the address found in the packet.
+
+##### Explicit Congestion Notification
+
+Tag a forwarding packet with a signal that it is congested, then the receiver will notice and send reply to the sender to let it know it should throttle the output.
+
+##### Hop-by-Hop Backpressure
+
+Affect every hop with **chock packet** hence the load on the congested router can be immediately relife, however, **increase the upstream pressure**.
 
 ---
 
