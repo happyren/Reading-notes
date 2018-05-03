@@ -923,6 +923,10 @@ Tag a forwarding packet with a signal that it is congested, then the receiver wi
 
 Affect every hop with **chock packet** hence the load on the congested router can be immediately relife, however, **increase the upstream pressure**.
 
+#### Load Shedding
+
+
+
 ---
 
 ### Internetworking
