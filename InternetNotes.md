@@ -925,7 +925,11 @@ Affect every hop with **chock packet** hence the load on the congested router ca
 
 #### Load Shedding
 
+Routers throw away the packets they cannot handle while none of above method does not work.
 
+The problem is to decide which packet to drop, for file transmission, use **wine** because dropping the old one may cause the receiver increase the buffer usage to store the currently unusable new packets; for stream or any real-time application, use **milk** because old and delayed packets are useless.
+
+Application can also mark the packets they send about how important they are.
 
 ---
 
