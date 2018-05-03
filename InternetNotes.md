@@ -931,6 +931,61 @@ The problem is to decide which packet to drop, for file transmission, use **wine
 
 Application can also mark the packets they send about how important they are.
 
+##### Random Early Detection
+
+Routers maintain a queue length, when itreach the threshold, it will randomly drop packets, and those senders will slow down, and router do not need to explicitly inform the senders.
+
+---
+
+### Quality of Service
+
+Quality of service mechanism maintains the service quality promised as well as keep a low price, and the following four issues must be addressed to ensure the quality of service. There are two versions of QoS, **[Integrated Services](#integrated-services)** and **[Differentiated Services](#differentiated-services)**
+
+- [Application requirements about the network.](#application-requirements)
+
+- [How to regulates the traffic on entering the network.](#traffic-shaping)
+
+- How to reserve resources to increase perfomance.
+
+- Whether the network can behold more traffic.
+
+#### Application Requirements
+
+4 parameters defines the QoS flow requirements: **bandwidth**, **delay**, **jitter**, and **loss**.
+
+> The network requirements are less demanding than application requirements when the application can imporve the service provided by the network.
+
+| Application | Bandwidth | Delay | Jitter | Loss |
+| :---: | --- | --- | --- | --- |
+| Email | Low | Low | Low | Medium |
+| File Sharing | High | Low | Low | Medium |
+| Web Access | Medium | Medium | Low | Medium |
+| Remote login | Low | Medium | Medium | Medium |
+| Audio on demand | Low | Low | High | Low |
+| Video on demand | High | Low | High | Low |
+| Telephony | Low | High | High | Low |
+| Videoconferencing | High | High | High | Low |
+
+Network can be divided to different categories of QoS for different purposes:
+
+1. Constant bit rate.
+
+2. Realtime variable bit rate.
+
+3. Non-realtime variable bit rate.
+
+4. Available bit rate.
+
+#### Traffic Shaping
+
+**Traffic shaping** is to regulating the average rate and the burst rate of data flow entering into the network. User and ISP would make **SLA(Service Lever Agreement)** to tell the network about the flow pattern of the user. And by monitoring the traffic using **traffic policing**, network would decide whether the user excess the agreement, and its exceeded packets would be marked as low priority or dropped.
+
+#### Leaky and Token Bucket
+
+Leaky bucket is like a bucket with a hole in the bottom, if there exist packet in the bucket, it will go out at a constant rate of **R**, otherwise nothing happens; if the queue of the bucket is full, any extra packets are lost. This bucket is like an interface connect the host to the network, exceeded packet either waited until it could be fitted into the bucket or get discarded; the former solution is when a host shaping its flow, the later one happens at hardware of provider on policing the traffic.
+
+Token bucket works like a tab input water/token at rate **R** into the bucket with capacity of **B**, and to send the packets means taking the water out of the bucket, no more than **B** packets can stay in the bucket.
+
 ---
 
 ### Internetworking
