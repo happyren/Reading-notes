@@ -986,12 +986,36 @@ Leaky bucket is like a bucket with a hole in the bottom, if there exist packet i
 
 Token bucket works like a tab input water/token at rate **R** into the bucket with capacity of **B**, and to send the packets means taking the water out of the bucket, no more than **B** packets can stay in the bucket.
 
+#### Packet Scheduling
+
+Allocate router resources for packets of a flow or amoung competing flows, mostly focus on three major component:
+
+1. Bandwidth: not oversubscribing any output line.
+
+2. Buffer size: up to a maximum value, there is always a buffer available when a flow need it.
+
+3. CPU cycles(speed): CPU should not be overloaded so it could process packets timely(quickly).
+
+A easy method is **FIFO**, but it would let one flow eaisly affect the other flows.
+
+A refinement could be **fair queueing** where each flow has a independent queue, however, it provides hosts using large packets more bandwidth. A refinement is to using the transmission finishing time to assign actual byte for a flow in a queue, and send out the packet following the byte queue, but it gives all the flow the same priority.
+
+This is handled by giving the flow more than one byte to weight each flow, hence it is a **Weighted Fair Queueing**. This algoirthem is farther simplified using **deficit round robin**, reduce the complexity to constant from logarithm.
+
+Other algorithms like priority queueing, it creates priority queue for different level, within each level it follows **FIFO**, but it may failed when high priority burst.
+
+Finally, a packet could be carring a timestamp, and it would be sent by the timestamp.
+
+#### Admission Control(QoS)
+
+
+
 ---
 
 ### Internetworking
 
 | Item | Some Possibilities |
-| --- | :---: |
+| :---: | :---: |
 | Service Offered | Connectionless vs Connection Oriented|
 | Addressing | Different Size, Flat and Hierarchical |
 | Broadcasting | Present or Absent |
