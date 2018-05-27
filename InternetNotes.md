@@ -1008,7 +1008,7 @@ Finally, a packet could be carring a timestamp, and it would be sent by the time
 
 #### Admission Control(QoS)
 
-
+QoS guarantee is established through admission control.
 
 ---
 
