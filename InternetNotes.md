@@ -1010,6 +1010,8 @@ Finally, a packet could be carring a timestamp, and it would be sent by the time
 
 QoS guarantee is established through admission control.
 
+When a user want to send a data flow, the requirement sent along with, hence the ISP could decide whether accept or not based on the current QoS situation. **QoS Routing** is used when the best route to the destination is congested, then a backup route must be picked to meet the QoS.
+
 ---
 
 ### Internetworking
