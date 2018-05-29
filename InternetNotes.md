@@ -1012,9 +1012,15 @@ QoS guarantee is established through admission control.
 
 When a user want to send a data flow, the requirement sent along with, hence the ISP could decide whether accept or not based on the current QoS situation. **QoS Routing** is used when the best route to the destination is congested, then a backup route must be picked to meet the QoS.
 
+Because the acceptance is not simply determined by the resources, some application can tolerate occational missed deadlines, and some application could be negotiable, we would need the flow be detailed descripted using **flow specifications**.
+
+Delay would not be exceed a maximum value because a burst could cause a delay in  the first router, but it will also be smooth by the delay, hence it would not affect the whole path.
+
 ---
 
 ### Internetworking
+
+Different types of network is always needed and necessary, and connect them together will always be a case, hence internetworking is important.
 
 | Item | Some Possibilities |
 | :---: | :---: |
