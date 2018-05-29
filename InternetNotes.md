@@ -1020,7 +1020,7 @@ Delay would not be exceed a maximum value because a burst could cause a delay in
 
 ### Internetworking
 
-Different types of network is always needed and necessary, and connect them together will always be a case, hence internetworking is important.
+Different types of network is always needed and necessary, and connect them together will always be a case, hence internetworking is important. Hence we need to address the difference of the networks:
 
 | Item | Some Possibilities |
 | :---: | :---: |
@@ -1034,6 +1034,32 @@ Different types of network is always needed and necessary, and connect them toge
 | Security | Privacy Rules |
 | Parameters | Different Timeout |
 | Accounting | By connect time, packet |
+
+2 ways could be considered in order to connect different networks: using a device to translate packets from different networks; adding an additional common layer to encapsulate the packets.
+
+- protocol way: TCP/IP protocol, in this way, the data is essentially encapsulated within a IP packet, and then the lower layer packets, when acrossing the boundary, it would be decapsulate and re-encapsulated using a new lower layer protocol.
+
+- device way: routers and gateways. Switches do not need to understand the protocols used by packets, but the routers do, hence the router knows the IP but the switch knows only the MAC.
+
+Tunneling is a good implementation of protocol encapsulation.
+
+#### internetworking routing
+
+Routing through different networks is complicated.
+
+Network operators holds different ideas about good route, and they wouldn't share it, and last, the internet is larger than any of the network, hence the routing algorithm need to be in scale.
+
+Within each network, a intradomain protocol is used, and among the networks, interdomain protocol is used.
+
+And since each network rely on its on intradomain protocol, it is called **Autonomous System**.
+
+#### Packet Fragmentation
+
+Packet size or **Path Maximum Trasmission Unit** differes for each network. One solution is letting the source know the Path MTU, hence packet size would meet the need in the first place; another one is to break them up when transmitting.
+
+Two fragmentation method, one is transparent fragmentation, the other is non-transpartent fragmentation. Deviated at whether to reassemble packet at intermediate routers.
+
+Then Path MTU discovery is used to find the MTU rather than fragmentation, the disadvantage is it may leads to slow start up time.
 
 #### Subnet
 
