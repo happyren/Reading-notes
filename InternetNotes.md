@@ -1149,4 +1149,6 @@ NAT also has issues and objections from IP community:
 
 **NIC** in data-link layer has no idea of IP address. The sender using **ARP(Address Resolution Protocol)** making broadcast to request receiver with the IP, only the receiver with that IP would respond, hence the IP is connected to the Ethernet interface. And this is the vulnerability to be exploited in ARP spoofing.
 
+**RARP(Reverse Address Resolution Protocol)** is the reverse way of providing MAC address and mapping to IP address.
+
 ## Transport Layer
