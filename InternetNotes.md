@@ -732,6 +732,8 @@ Classic and switched ethernet: Classic Ethernet solves multiple access as above,
 
 #### Ethernet MAC sublayer protocol analysis
 
+![MAC sublayer structure](https://upload.wikimedia.org/wikipedia/commons/7/72/Ethernet_Frame.png)
+
 1. first 8 bytes, 10101010(last byte of the 8 bytes is different, it is 10101011, which is _Start of the Frame_ delimiter), by the Manchester encoding, this sequence would generates a 10MHz square wave for 6.4 usec.
 
 2. the next 12 bytes contains 2 address, first is the destination address and the second is the source, the first bit of the address is **0** for ordinary address and **1** for Group address, which allows multiple stations to listen to a single address, which is multicasting, and if the address is all **1**, it is broadcasting. Source address is globally unique, assigned centrally by **IEEE**, first three bytes indicates the manufacturer, last three bytes are by manufacturer.
