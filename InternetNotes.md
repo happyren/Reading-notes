@@ -1127,4 +1127,26 @@ IP protocol is the one to hold the networks together to form the Internet.
 
 **CIDR(Classless InterDomain Routing)** uses IP address aggregation, it aggregate the IP address to a supernet, hence the intermediate routers do not need to know every detailed destinations.
 
+**NAT(Network Address Translation)** indicates that since the IP address is not enough for all the devices, the idea of using private IP address is utilized. For each home a unique public IP address is assigned, then, within each subnet of that home, a preserved private IP address is applied. Packet would be transfered to private IP inbound and public IP outbound. (*192.168.0.0* for example.) The way the transfer is done using the port idea. Using ports to handle the identification of each process that currently using the network.
+
+NAT also has issues and objections from IP community:
+
+1. It violates the architecture model of IP that IP must be unique.
+
+2. It breaks the end-to-end connectivity model of the Internet makes anytime connection seemingly less possible.
+
+3. It makes connectionless network somewhat connection oriented.
+
+4. It makes Network layer assume protocols in Transport layer.
+
+5. It limit the protocol to TCP, UDP, etc.
+
+6. Some application use more ports than one.
+
+7. Ports number is limited.
+
+#### ARP & RARP
+
+**NIC** in data-link layer has no idea of IP address.
+
 ## Transport Layer
