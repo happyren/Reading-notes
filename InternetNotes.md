@@ -1061,6 +1061,64 @@ Two fragmentation method, one is transparent fragmentation, the other is non-tra
 
 Then Path MTU discovery is used to find the MTU rather than fragmentation, the disadvantage is it may leads to slow start up time.
 
+#### Internet Network Layer
+
+Network layer plays essential roles in internet, top 10 design principles are:
+
+1. Make sure it works.
+
+2. Keep it simple.
+
+3. Make clear choices.
+
+4. Exploit modularity.
+
+5. Expect heterogeneity.
+
+6. Avoid static options and parameters.
+
+7. Look for a good design; it need not to be perfect.
+
+8. Be strict when sending and tolerate when receiving.
+
+9. Think about the scalability.
+
+10. Consider performance and cost.
+
+IP protocol is the one to hold the networks together to form the Internet.
+
+#### IPv4
+
+![IPv4 Header](https://ciscocciers.files.wordpress.com/2013/10/5-535.jpg)
+
+- Version field indicates it is IPv4 header, 4 bits.
+
+- IHL indicates the header length, minimum is 5, maximum is 15.
+
+- Type of Service could be integrated service(high QoS) or differentiated service(low QoS).
+
+- Total length use 2 bytes measure the length of the header + payload.
+
+- Identification tells which packet the current frame it belongs.
+
+- DF stands for don't fragment.
+
+- MF stands for more fragments, only the last one of the fragments doesn't have it set.
+
+- Fragment offset tells the sequence of the fragment.
+
+- Time to live limit packet lifetime.
+
+- Protocol indicates transport layer protocol(TCP, UDP, ICMP).
+
+- Header checksum ensures header contains correct address information and so on.
+
+- Source address is the sender's address.
+
+- Destination address is the receiver's address.
+
+- Option field contains additional information for: security, strict source routing, loose source routing, record route, and timestamp.
+
 #### Subnet
 
 > Subnet all 0s and all 1s: subnet all 0s are reserved for network, and all 1s are reserved for broadcasting, hence if three bits subnet, total subnet usable are 2^3-2 = 6. [Subnet all 0s and all 1s convention by CISCO](https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html)
