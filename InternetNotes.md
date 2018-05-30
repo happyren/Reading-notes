@@ -1123,4 +1123,6 @@ IP protocol is the one to hold the networks together to form the Internet.
 
 > Subnet all 0s and all 1s: subnet all 0s are reserved for network, and all 1s are reserved for broadcasting, hence if three bits subnet, total subnet usable are 2^3-2 = 6. [Subnet all 0s and all 1s convention by CISCO](https://www.cisco.com/c/en/us/support/docs/ip/dynamic-address-allocation-resolution/13711-40.html)
 
+**CIDR(Classless InterDomain Routing)** uses IP address aggregation, it aggregate the IP address to a supernet, hence the intermediate routers do not need to know every detailed destinations.
+
 ## Transport Layer
