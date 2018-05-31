@@ -235,11 +235,11 @@ Hybrid model comes from top to bottom, from the layer closest to user (Which is 
 
 This is the one that the **user actually interacting with**, like safari, chrome, or outlook application.
 
-- Transport layer
+- [Transport layer](#transport-layer)
 
 This layer decides the data size of one transmission.
 
-- [Network layer(Unfinished Reading)](#network-layer)
+- [Network layer](#network-layer)
 
 The router operates on this layer. Assign IP address to a certain MAC address or a certain NIC.
 
@@ -1152,3 +1152,71 @@ NAT also has issues and objections from IP community:
 **RARP(Reverse Address Resolution Protocol)** is the reverse way of providing MAC address and mapping to IP address.
 
 ## Transport Layer
+
+Transport layer in order to provide efficient, reliable, and cost-effective data transmission service to user throught application layer.
+
+Transport layer software and hardware are called transport entity.
+
+Connection-oriented and connectionless transport layer protocols are very like the counterpart in the network layer, only the connectionless transport layer is inefficient when setting upon a connection-oriented network layer.
+
+> The difference between the **Transport Layer** and **Network Layer** is the former one entirely run on the user's machine. It reassure the QoS on top of the Network Layer when it doesn't.
+
+The other reason is network layer has significantly different calls from one to others, so hiding it behind the transport layer provides easiness for application layer.
+
+Transport layer intends to hide all the inperfection of the network so that the user could assume the network transfers error free bits.
+
+- [Transport Layer Services](#transport-layer-services)
+
+- [Transport Layer Protocols](#transport-layer-protocols)
+
+### Transport layer Services
+
+| Primitive | Packet Sent | Meaning |
+| :---: | :---: | :---: |
+| LISTEN | (none) | Block until some process want to connect |
+| CONNECT | CONNECTION REQ | Actively attempt to establish a connection |
+| SEND | DATA | Send information |
+| RECEIVE | (none) | Block until DATA units arrive |
+| DISCONNECT | DISCONNECTION REQ | Request a release of the connection |
+
+> Symmetric connection: connection could be fully disconnect only when both side DISCONNECT.
+
+#### Socket Primitives
+
+This is the service primitives for TCP connection.
+
+| Primitive | Meaning |
+| :---: | :---: |
+| SOCKET | Create a new communication endpoint |
+| BIND | Associate a local address with a socket |
+| LISTEN | Announce willingness to accept connections; give queue size |
+| ACCEPT | Passively establish an incoming connection |
+| CONNECT | Actively attempt to establish a connection |
+| SEND | Send some data over the connection |
+| RECEIVE | Receive some data from the connection |
+| CLOSE | Release the connection |
+
+> 1. Connection release of socket is also symmetric.
+> 2. Reliable byte stream: socket API combined with TCP to provide connection-oriented service.
+
+### Transport layer protocols
+
+It handles similar problems as to data-link layer in different ways:
+
+1. They operates on different level, for data-link layer connects two machine end-to-end, the transport layer handles over the whole network.
+
+2. The connection is simple to establish in the data-link layer since both ends always there.
+
+3. Network has storage in it while the physical layer does not.
+
+4. Issue is more complicated in the transport layer than in data-link layer.
+
+#### Addressing
+
+In transport layer, the access point is **port**, it is called **TSAP(Transport Service Access Point)**.
+
+To get the port for application, a **portmapper** is normally used. User would connect to the **portmapper** and then it would request a port, and connect the application to that port.
+
+**Initial connection protocol** is when the server service may not listen to the port, a process server *inetd* would be listen to it and when no service respond to connection, connection would be pass to it.
+
+## Application Layer
