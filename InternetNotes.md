@@ -1171,6 +1171,8 @@ Transport layer intends to hide all the inperfection of the network so that the 
 
 - [Transport Layer Protocols Design](#transport-layer-protocols)
 
+- [Congestion control](#congestion-control)
+
 - [User Datagram Protocol](#udp)
 
 - [Transmission Control Protocol](#tcp)
@@ -1280,6 +1282,20 @@ Only one network address is available, multiple operation needs to have cvonvers
 Another example would be the user needs extra bandwidth, so one operation holds conversation through multiple network address, it is **inverse multiplexing**, a protocol called **SCTP(Stream Transmission Control Protocol)** utilizes inverse multiplexing.
 
 #### Crash recovery
+
+If routers crashes, and the connection need to be long lived, then issue happens.
+
+Crash recovery is hard because each layer has no way to know what status it in, for **N** layer crash, only **N+1** layer could help do the recovery.
+
+And a truely end-to-end acknowledgement is almost impossible to achieve.
+
+### Congestion Control
+
+The Internet relies heavily on the Transport layer to take congestion control.
+
+A good congestion control can not only avoid congestion, but also properly allocate the bandwidth so that the performance could be improved, and bandwidth could be fairly utilized.
+
+If transport layer protocol is poorly designed, and the retransmitted packet is delayed but not lost, the network could be congestion collapse.
 
 ### UDP
 
