@@ -231,7 +231,9 @@ A goal is to connect multiple networks in a seamless way, and another goal is th
 
 Hybrid model comes from top to bottom, from the layer closest to user (Which is [Application layer](#application-layer)), to the layer wired into the network (which is [Physical layer](#physical-layer)).
 
-- Application layer
+- [Security](#security)
+
+- [Application layer](#application-layer)
 
 This is the one that the **user actually interacting with**, like safari, chrome, or outlook application.
 
@@ -1219,4 +1221,50 @@ To get the port for application, a **portmapper** is normally used. User would c
 
 **Initial connection protocol** is when the server service may not listen to the port, a process server *inetd* would be listen to it and when no service respond to connection, connection would be pass to it.
 
+#### Connection Establishment
+
+The problem could happen when the network can lose, delay, corrupt, and duplicate packet.
+
+One solution is to setup new connection for every transaction, so the duplicated packet cannot find the destination. But it is wasteful and complicated.
+
+The other one is to setup a sequence number, with obsolete sequence number, the packet cannot be accepted. But it would require the transport to hold the list of the sequence number.
+
+In real world, the packet life time is used to kill the packet, it could be restricted by:
+
+1. Restricted network design.
+
+2. Putting a hop counter in each packet.
+
+3. Timestamping each packet.
+
+In practice of Internet, we will kill all the packets and all of the ACKs, hence we use a **T** period, which in Internet case, is 120s. Then the SEQ of each packet should be unique within this **T**.
+
+However, what if the host crashes. Then it needs a global clock, and let it represent the SEQ. It is a bit counter with bits equals or exceeds the bits of SEQ, and it would continue running even if the host shuts down. To utilize this, the sender must send following the clock, that is to reduce data rate. And with clock rate **C** and sequence number space **S**, **S/C>T** must holds.
+
+With the clock method, we can distinguish a new segment from a recent duplicated segment, but we still cannot tell a CONNECT REQ from a recent duplicated CONNECT REQ. Hence introduce **three-way handshake**.
+
+> Three-way handshake: the establishment of the connection needs one peer to check with the other whether the REQ is current.
+
+Host 1 CONNECTION REQ with its own SEQ *seq1*, HOST 2 ACK *seq1* and attach its own SEQ *seq2*, and HOST 1 ACK *seq2* with the first data segment.
+
+**TCP** uses this improvement with adding timestamp to the SEQ so that it will never wrap up, due to the fact **TCP** is used on very fast networks, its name is **PAWS(Protection Against Wrappped Sequence numbers)**.
+
+#### Connection Release
+
+Asymmetric release could cause data loss.
+
+Symmetric release could solve the problem, however, the **two army problem** is difficult to be solved.
+
+It means if neither sides is convinced that the disconnect will happen for the other side, the disconnect will never happen.
+
+Buffer is considered an important part of the transmission for it is needed to store the data temporarily. Three approaches are:
+
+1. Static sized buffer, good when segments sizes are uniform.
+
+2. Dynamic sized buffer, utilize memory better, but request complicated memory manager.
+
+3. Single large circular buffer per connection, makes good use of memory only when the connections are heavily loaded.
+
 ## Application Layer
+
+## Security
