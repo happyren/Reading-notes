@@ -1169,7 +1169,11 @@ Transport layer intends to hide all the inperfection of the network so that the 
 
 - [Transport Layer Services](#transport-layer-services)
 
-- [Transport Layer Protocols](#transport-layer-protocols)
+- [Transport Layer Protocols Design](#transport-layer-protocols)
+
+- [User Datagram Protocol](#udp)
+
+- []
 
 ### Transport layer Services
 
@@ -1264,6 +1268,22 @@ Buffer is considered an important part of the transmission for it is needed to s
 2. Dynamic sized buffer, utilize memory better, but request complicated memory manager.
 
 3. Single large circular buffer per connection, makes good use of memory only when the connections are heavily loaded.
+
+Buffer allocation problem is normally arised with datagram since the connectionless network causes more packet loss.
+
+#### Multiplexing
+
+Multiplexing is sharing several conversations over connections, virtual circuits, and physical links.
+
+Only one network address is available, multiple operation needs to have cvonversations through that address, this is called **multiplexing**.
+
+Another example would be the user needs extra bandwidth, so one operation holds conversation through multiple network address, it is **inverse multiplexing**, a protocol called **SCTP(Stream Transmission Control Protocol)** utilizes inverse multiplexing.
+
+#### Crash recovery
+
+### UDP
+
+### TCP
 
 ## Application Layer
 
