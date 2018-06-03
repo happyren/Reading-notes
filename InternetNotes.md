@@ -1497,8 +1497,62 @@ Now idea is TCP assume packet lost is due to congestion.
 
 - Duplicated ACK could be used to count the packet in the network. Utilize this feature, **fast recovery** would let the packet in the network drop to the congestion window.
 
-- **ECN** flag allows router tells the sender when congestion is approaching.
+- **ECN** flag allows router tells the receiver when congestion is approaching, receiver tells sender by using **ECN-Echo**, sender ack receiver by **CWR**.
 
 ## Application Layer
+
+Layers below the application layer provides network transport services, but they do not do the real job interacting with users.
+
+Application layer is the layer where the user get to access the network, below are the essential gadgets for the users to use the network easily.
+
+- [DNS](#dns)
+
+- [Email](#email)
+
+- [World Wide Web](#world-wide-web)
+
+- [Streaming](#streaming)
+
+### DNS
+
+**Domain Name Service** interpretes the IP address to the human readable domain name.
+
+It firstly come out when APRNET, back then, all hosts are list in a hosts.txt file, for hundred machines, this works fine, but people realize that for millions of machines, it wouldn't work as good. Host name conflict would happen unless all hosts name are centrally managed. Hence the DNS is introduced.
+
+The Library procedure called is **resolver**.
+
+**ICANN(Internet Corporation for Assigned Names and Numbers)** manages the DNS, it is divided into more than 250 top level domain names.
+
+Second level domain name need to be applied from the **registrars** appointed by the ICANN.
+
+- Cybersquatting is an investment.
+
+- Domain name can be either absolute or relative.
+
+- Domain names are case-insensitive.
+
+#### Domain name resource record
+
+Domain name whether is a single host or a top-level domain, can have a set of **resource records**, which constructs DNS database.
+
+- *Domain_name* tells domain to which this record applies, many records exists for each domain.
+
+- *Time_to_live* indicates how stable the record is, highly stable is 86400.
+
+- *Class* indicates the application method, **IN** is for Internet, others may exist but rarely in use.
+
+- *Type* tells what kind of record this is. **SOA** provides the name of primary source of information about the name server's zone.
+
+- *Value* valid value corresponding to the type.
+
+#### DNS resolve
+
+Iterative and recursive resolution.
+
+### Email
+
+### World Wide Web
+
+### Streaming
 
 ## Security
