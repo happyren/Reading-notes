@@ -1487,6 +1487,10 @@ Congestion window is managed in addition to the flow control window, hence even 
 
 Now idea is TCP assume packet lost is due to congestion.
 
+- **ACK clock** means sender use 4 segments to test the receiver network speed, and sending packet at this rate would max out the receiver network without congesting the router.
+
+- **Slow start** indicates the sender would initialize a small congestion window, then when the receiver returns ACK, the sender know no congestion, and increase the congestion window by 1 MSS, essentially each RTT double the size.
+
 ## Application Layer
 
 ## Security
