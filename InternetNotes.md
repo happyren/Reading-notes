@@ -1489,7 +1489,15 @@ Now idea is TCP assume packet lost is due to congestion.
 
 - **ACK clock** means sender use 4 segments to test the receiver network speed, and sending packet at this rate would max out the receiver network without congesting the router.
 
-- **Slow start** indicates the sender would initialize a small congestion window, then when the receiver returns ACK, the sender know no congestion, and increase the congestion window by 1 MSS, essentially each RTT double the size.
+- **Slow start** indicates the sender would initialize a small congestion window, then when the receiver returns ACK, the sender know no congestion, and increase the congestion window by 1 MSS, essentially each RTT double the size. Slow start threshold is used to detect the congestion, when it reaches, the window size would be cut half, later, the window size increase by 1 segment.
+
+- **Duplicated ACK** is the receiver obtain a packet beyond the lost packet, it would send back ACK with previous SEQ, so when sender receive duplicated ack, it knows a lost occurs.
+
+- Inreality, TCP would consider three duplicated ack means a lost and the lost one is ack+1 packet, hence the lost packet get sent immediatly, this is **fast retransmission**.
+
+- Duplicated ACK could be used to count the packet in the network. Utilize this feature, **fast recovery** would let the packet in the network drop to the congestion window.
+
+- **ECN** flag allows router tells the sender when congestion is approaching.
 
 ## Application Layer
 
