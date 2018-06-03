@@ -1619,6 +1619,92 @@ The browser gets the web page in the following order:
 
 9. TCP connection released if no other requests.
 
+On the server side:
+
+1. Sever accept the connection.
+
+2. Get the path to the page.
+
+3. Get the page.
+
+4. Send the page.
+
+5. Release connection.
+
+Using MIME could allow the browser to open multiple type of files, such as open .pdf in the browser.
+
+For the one supporting MIME server:
+
+1. Resolve webpage name.
+
+2. Perform Access Contorl on the page.
+
+3. Check cache.
+
+4. Fetch page or build it.
+
+5. Determine the rest of reponses.
+
+6. Return response to the client.
+
+7. Making an entry to the server log.
+
+- Coockie is used to identify user, no expire field is non-persistent, expires is persistent.
+
+- CSS is style sheet.
+
+- PHP on server side generates the HTTP.
+
+- Javascript shows dynamic page on client side.
+
+- HTML is HyperText Markup Language.
+
+- For HTTP, GET and HEAD both get data from server.
+
 ### Streaming
+
+Including realtime video and realtime audio.
+
+#### Audio
+
+**dB(decibels)** is 10lg(A/B)
+
+Audio go through **ADC(Analogue to Digital Converter)** to bits for transmission, and back using **DAC(Digtal to Analogue Converter)**.
+
+#### Video
+
+Video is measured using pixels.
+
+- Interlacing is a tech that split picture into two fields, odd and even, each time update half, so the frame rate up to 50. But it is not necessary on computer for the video stream is progressive, and graphics card can buffer.
+
+#### Stored Videos
+
+**VoD(Video on Demand)** is the form of streaming.
+
+**RSTP(Real Time Streaming Protocol)** would need to handle:
+
+1. Manage UI.
+
+2. Transmission Error.
+
+3. Decompression.
+
+4. Eliminate jitter.
+
+Low water mark is RTT \* BitRate.
+
+#### Real-Time Conferencing
+
+**VoIP(voice over IP)** is the most disruptive.
+
+VoIP has advantages:
+
+- Financial savings.
+
+- Consolidate infrastructure.
+
+- Flexible infrastructure.
+
+- Standard based voice and data.
 
 ## Security
