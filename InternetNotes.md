@@ -1547,11 +1547,77 @@ Domain name whether is a single host or a top-level domain, can have a set of **
 
 #### DNS resolve
 
-Iterative and recursive resolution.
+- Iterative and recursive resolution.
+
+- Cache is quick but out of date.
+
+- 13 root servers.
+
+- UDP.DNS is used for query.
+
+- root server of a zone is authority.
 
 ### Email
 
+Two entity, **user agent** and **message transfer agent(mail server)**.
+
+\* **Mail servers are assumed always on, but user agents are not**.
+
+- Sending new email is **mail submission**.
+
+- Protocol used is **SMTP(Simple Mail Transfer Protocol)**.
+
+- Mailing list is copies of identical mails sends to different receivers.
+
+- Mail would have envelope for basic information which is public.
+
+- Header and body are private, header contains sender info, body is message.
+
+#### User agent
+
+User interface. After message be read, user could choose **message disposition**, which are following operation on mail.
+
+**Auto responder** and **Vacation agent** help automatically reply at certain period of time.
+
+**Signature block** is extra feature to append digital signature to ensure the message is valid.
+
+**MIME(Multipurpose Internet Mail Extensions)** defines encoding of non-ASCII message.
+
+Email sending and receiving is in the following order:
+
+- Mail submission. SMTP used with AUTH extension to submit the mail, over TCP channel.
+
+- Message transfer. Using SMTP over TCP channel, relay mail to the final mail server to the receiver's mail box.
+
+- Final delivery. Final delivery is used **IMAP(Internet Message Access Protocol)** with mails remain on the server. It is an updated version of **POP3(Post Office Protocol, version 3)** which would download the mail from server.
+
 ### World Wide Web
+
+Webpages uses **Hypertext**, the transfer protocol is **HTTP(Hypertext Transfer Protocol)**. It is viewd in a browser.
+
+If a page shows the same content everytime, it is a **static page**, on the other hand, if a page is generated on demand with data, it is a **dynamic page**.
+
+Each page has a **URL(Uniform Resource Locator)**, it comsists of its protocol, DNS, and a path to the specific page.
+
+The browser gets the web page in the following order:
+
+1. Browser determines the URL.
+
+2. Browser ask DNS for IP address.
+
+3. Browser gets the IP address.
+
+4. Browser make connection through protocol by TCP.
+
+5. Browser send request based on the protocol for the file indicated in path.
+
+6. Server send back file by protocol.
+
+7. Embedded URL are also fetched.
+
+8. Browser display the webpage.
+
+9. TCP connection released if no other requests.
 
 ### Streaming
 
