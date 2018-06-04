@@ -1775,4 +1775,60 @@ Three requirements must be meet:
 
 3. Can resist chosen plaintext attack.
 
-> RSA:
+**RSA** is a good example, it is conducted in following steps:
+
+1. Choose two large prime number p, q.
+
+2. n = p \* q, z = (p - 1) \* (q - 1)
+
+3. Choose a relatively prime number d to z.
+
+4. Find e so e \* d = 1 mod z.
+
+5. C = P ^ e (mod n), P = C ^ d(mod n).
+
+So the Public Key is (e, n), Private Key is (d, n).
+
+Normally the primes are requested to reach 1024 bits, leads to extremly difficult and slow encrypt and decrypt.
+
+### Digital Signature
+
+#### Symmetric Key
+
+One intermediate host is requested, A send to mid A,KA(P,T,R,B), then mid decrypt, send B KB(A, R, t, P, Kmid(A, t, P)).
+
+#### Message Digest
+
+Encrypt one text to verify authentication, the hash function use is **MD(Message Digest)**:
+
+1. Given P, to compute MD(P) is easy.
+
+2. Given MD(P), it is impossible to find P.
+
+3. Given P, no P' so that MD(P') = MD(P).
+
+4. 1 bit difference would produce very different result.
+
+#### Birthday Attack
+
+If there are n input and k output, input maps to output, n(n-1)/2>k produce good oppotunity to break the mapping.
+
+### Communication Sec
+
+#### IPsec
+
+IPsec including adding security header to the data, and key establishment through **ISAKMP(Internet Security Association and Key Management Protocol)**.
+
+**Transport mode**, IPsec header inserted between IP header and TCP header.
+
+**Tunnel mode**, VPN.
+
+#### Firewalls
+
+Firewall must:
+
+1. Filter inbound and outbound data.
+
+2. Let pass only the authorized data.
+
+3. Be immuned to any penetration.
