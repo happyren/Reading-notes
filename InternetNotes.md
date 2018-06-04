@@ -1707,4 +1707,72 @@ VoIP has advantages:
 
 - Standard based voice and data.
 
-## Security
+## Securitys
+
+Network Security has 4 related concepts:
+
+1. Secrecy
+
+2. Authentication: People can prove who they say they are.
+
+3. Non-repudiation: People cannot deny what they have done.
+
+4. Integrity Control
+
+These four have all appears in traditional OS scenario, but now implemented in slightly different way in Network. They can be fond in all layers of network, apart from physical layer, are all implemented based on common cryptographical principles.
+
+### Cryptography
+
+Three key factor:
+
+Plaintext -> E(Plaintext) -> Ciphertext -> D(Ciphertext) -> Plaintext.
+
+Kerckhoff's law indicates only Key is secret, and encryption key should be the same as decryption key.
+
+- Substitute Cipher: Each letter or group of letters are systematically replaced by another letter or group of letters.
+
+- Transition Cipher: Plaintext is reordered but no substitution.
+
+- One-time pad: Generate a random bit stream, convert the plaintext into a bit stream, XOR both bit stream to get the Ciphertext.
+
+- Quantum Cryptography.
+
+Two fundamental principles:
+
+1. Message must contain some redundancy.
+
+2. Methods are needed to foil replay attack.
+
+#### Symmetric Key Algorithm
+
+Same key would be used for both encryption and decryption, both substitute and transition can be used to obtain the Cipher and Plaintext.
+
+- **DES(Data Encryption Standard)** uses 64 bits blocks and 56 bits key. Start and end in transition and reverse transition, second to last step would swap first 32bits with the last, internal 16 stages are encryption using key's different function.
+
+- **AES(Advaced Encryption Standard)** uses 128 bits block and 128 bits key.
+
+**DES** and **AES** are essentially just substitution and transition, hence the same plaintext always get the same ciphertext, so we need different cipher modes.
+
+ECB(Electronic Code Book) mode: plaintext is divided into 8bytes blocks then get encrypted.
+
+Block Chaining: each plaintext block XOR with the previous ciphertext block before being encrypted. First block XOR with **IV(Initial Vector)**.
+
+Feedback mode: Encryption is process byte by byte, a shift register is used, everytime, the shift register is encrypted, chosen the left most byte to XOR plaintext, and insert the Ciphertext back into the shift register; when decryption, shift register is again encrypted, selecting the left most byte, XOR with Ciphertext, get the plaintext and then insert the current Ciphertext into the shift register. **It uses triple DES**. As long as the shift register remians the same, the algorithm works fine.
+
+Stream mode: IV is used with key to get a output block, then the output block is encrypted with key to get the second output block and so on. These blocks are key stream, used like a one time pad. Hence the transmission error only affect the error bit in the decryption. (key, IV) must not be reused.
+
+Counter mode: IV encrypted and XOR Plaintext to Ciphertext, then IV + random number.
+
+#### Asymmetric Key
+
+Two key, one public, one private, while sending, to **encrypt**, using receiver's Public Key, then only receiver can decrypt with receiver's Private Key; to **authenticate**, using sender's Private Key, if can be decrypted by sender's Public Key, then is authenticated.
+
+Three requirements must be meet:
+
+1. D(E(P)) = P
+
+2. It is extremly difficult to deduce D from E.
+
+3. Can resist chosen plaintext attack.
+
+> RSA:
