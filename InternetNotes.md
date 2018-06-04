@@ -1821,7 +1821,11 @@ IPsec including adding security header to the data, and key establishment throug
 
 **Transport mode**, IPsec header inserted between IP header and TCP header.
 
-**Tunnel mode**, VPN.
+**Tunnel mode**, **ESP(Encapsulate Security Payload)**.
+
+#### VPN
+
+Virtual Private Network, issue could happen between gateway to the final destination.
 
 #### Firewalls
 
