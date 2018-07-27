@@ -1,4 +1,8 @@
-# Internet Technology
+---
+layout: post
+title: Internet Technology
+tag: academic
+---
 
 > Internet Technology Note sheet, based on _Computer Network Pearson.2011_
 
