@@ -1,6 +1,6 @@
 # Operating System
 
-> This is a reading notes based on the book -Modern Operating Systems-.
+> This is a reading notes based on the book *Modern Operating Systems*.
 
 ## Introduction
 
