@@ -66,3 +66,10 @@ Unix command interpreter, original shell is (**sh**), with GUI as a program runn
 
 Resolving the program which has greater demand on RAM than physical RAM available, OS would move back and forth the files that process operating on between RAM and Disk.
 
+---
+
+### OS Structure
+
+#### Monolithic Systems
+
+
