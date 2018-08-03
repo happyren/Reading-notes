@@ -180,10 +180,7 @@ and disk can be managed using free lists of bitmap.
 
 To ensure the reliability of the file system, increamental dump and file system repair program are normally implemented; to enhance the performance, caching, read ahead, placing block of files close to each other are general techniques.
 
-Example file systems:
-
-ISO9660, MS-DOS, UNIX
-
+Different file systems are used by different systems: ISO9660 (ISO image), MS-DOS (FAT-32), UNIX (Unix File System)
 ## I/O
 
 ## Multiple Processor System
