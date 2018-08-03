@@ -152,8 +152,38 @@ Finally, segmentation helps handle data structures that change size during execu
 
 ## File Systems
 
-## I/O
+File system is requested to fill out the insufficient of memory:
 
-## Deadlocks
+1. Main memory size is limited.
+
+2. Data is lost when process is terminated.
+
+3. Frequently necessary for multiple process to access the information at the same time.
+
+File can be seen as fixed-sized block accepting operations of: Reading and Writing the block.
+
+File is actually an abstraction of the storage, it is an logical unit of information created by process. Information stored in a file must be persistant, without being affected by the creation or temination of processes.
+
+---
+
+From outside, a file system is a collection of files, directories, and operations on them. Files can be read, write, and executed; directories can be created or destroyed, files can be move among them, and subdirectory could be created.
+
+
+From inside, a file system needs to concern how storage is allocated, how system keep track of the files, normal techniques includes:
+
+- Contiguous File
+- Linked List
+- File Allocation Table
+- i-nodes
+
+and disk can be managed using free lists of bitmap.
+
+To ensure the reliability of the file system, increamental dump and file system repair program are normally implemented; to enhance the performance, caching, read ahead, placing block of files close to each other are general techniques.
+
+Example file systems:
+
+ISO9660, MS-DOS, UNIX
+
+## I/O
 
 ## Multiple Processor System
