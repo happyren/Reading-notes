@@ -128,7 +128,27 @@ After all *.o* files are ready, they are passed to the linker to be bind togethe
 
 ## Processes
 
+Most important abstractions of modern operating system. It allows virtual CPUs, and the making of pseudo concurrent operation.
+
+It hides the effect of interrupts, it can be created and terminated dynamically with its own address space.
+
+Within each process, there could be multiple threads of control, they are scheduled individually, having own stack, but sharing common address spaces.
+
+Processes could be talking with each other through interprocess communication primitives.
+
 ## Memory Mangement
+
+Main memory is where the program and its dependent files are stored while it is running. Ideally, each programmer would like the memory be private, infinitely large, infinitely fast, but its normally unreachable.
+
+Instead, the memory hierarchy is developed to divide the memory by its speed vs size. And the **memory manager** is used to manage the memory hierarchy. Be aware, the memory is totally different thing against the disk. which is **File Management**.
+
+The memeory management could vary against its design complication, it could be simple and doing **no swap or page**, this kind of system only allows one program running and taking the RAM, while others supports multiprogramming.
+
+The next step is having **swap**, while the physical memory is not enough, the program or process is swapped to the disk, free spaces in RAM or on disk would be tracked using a bitmap or a hole list.
+
+Then introducing **Virtual Memory**, the process' address space is splited into uniform-sized blocks called pages, which can be put into any available page frame in memory.
+
+Finally, segmentation helps handle data structures that change size during execution and simplifies linking and sharing.
 
 ## File Systems
 
