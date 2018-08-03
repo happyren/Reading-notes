@@ -72,4 +72,68 @@ Resolving the program which has greater demand on RAM than physical RAM availabl
 
 #### Monolithic Systems
 
+Entire OS run as a single program in kernel mode.
 
+\* No information hiding between procedures.
+
+Basic Structs:
+
+1. Main program call service procedure.
+
+2. Service procedures respond to calls.
+
+3. Utility procedures supports services procedures.
+
+#### Layered Systems
+
+OS is organized as a hierarchy of layers, each one constructed upon the one below it.
+
+#### Microkernels
+
+Still layered systems, but some process may not be included into kernel mode, so that the bugs in these process would not be fatal and bring down the system instantly.
+
+#### Client-Server Model
+
+Server provides services, and clients use them.
+
+#### VM
+
+A derivation that allows multiple users working interactively at a terminal. (Timesharing System)
+
+Further, virtualization can serve as a way to run multiple service in different OS but on the same hardware.
+
+Type 1 hypervisor is not good for the PC, most VM we are seeing running on PCs are using type 2 hypervisor.
+
+There is a hosting to run the hybervisor then run the guest system.
+
+#### Exokernels
+
+Giving each user a subset of system resources.
+
+### How OS are written
+
+OS are mostly written in C and C++.
+
+C has pointer, but does not have strings, threads, packages, classes, objects, type safety, and garbage collection.
+
+C has storage either static or explicitly alocated and released by the programmer, that os why it is so attractive for programming an OS. Garbage collector consume too much time.
+
+*.h* and *.c* files are for C program to know what are the functions to be called, and how are they defined.
+
+*make* is a program that check what are needed, and what are changed, incrementally calling preprocessor and compiler to build the program.
+
+C preprocessor would expand dependent files and pass them to the compiler.
+
+After all *.o* files are ready, they are passed to the linker to be bind together and form a program could be executed.
+
+## Processes
+
+## Memory Mangement
+
+## File Systems
+
+## I/O
+
+## Deadlocks
+
+## Multiple Processor System
