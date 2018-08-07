@@ -181,6 +181,37 @@ and disk can be managed using free lists of bitmap.
 To ensure the reliability of the file system, increamental dump and file system repair program are normally implemented; to enhance the performance, caching, read ahead, placing block of files close to each other are general techniques.
 
 Different file systems are used by different systems: ISO9660 (ISO image), MS-DOS (FAT-32), UNIX (Unix File System)
+
 ## I/O
 
+OS controls all I/O devices on the hardware, it can issue commands, catch interrupts, and handle errors. It should provide interface between devices and the rest of the system. The interface should be the same for all devices.
+
+There are three ways implements I/O:
+
+1. Programmed I/O, where the main CPU inputs or outputs each byte or word and sits in a tight loop waiting until it can get or send the next one.
+
+2. Interrupt-driven I/O, where CPU starts an I/O transfer for a character or word and goes off to do something else until an intterupt signals the completion.
+
+3. DMA, where a dedicated chip manages the transfer and given an interrupt only when the whole block is transfered.
+
+I/O can be structured in 4 levels:
+
+1. interrupt service proceudres
+
+2. device drivers
+
+3. the device independent I/O software
+
+4. I/O libraries and spooler run in user space
+
+I/Os could including disks, clocks, character-oriented termials, GUI, and the power management.
+
 ## Multiple Processor System
+
+> No electrical signal can propagate faster than the speed of light (simple way of putting the Einstein's special relativity theory)
+
+When clock speed can no longer go faster, the design here is to add in more cores on the processor, hence we have our operating system design to be working on the multicore or multiple processor hardware, hence we have multiple processor systems.
+
+One way to solve it is using massively parallel computers, having many cpus working together, each working in acceptable clockspeed.
+
+Another one is using the Internet to connect the machines together for the joint computing power, an successful implementation is distributed system
