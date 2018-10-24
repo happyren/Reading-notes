@@ -1,5 +1,3 @@
-#Project Management
-
 ## Project
 
 ### What is a project
