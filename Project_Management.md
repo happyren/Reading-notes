@@ -276,3 +276,117 @@ Burndown chart build upon the story points against days, graphic interpretation 
 #### Pros and Cons
 
 Agile satisfy customer with rapid, continuous delivery, better people interaction, QA, and adaptiveness to changes; however, up front estimation is hard to make, and requires users' time investment, not easy for new starter, and could be intense for unexperienced team.
+
+## People skills - TEAM
+
+### Motivations
+
+People are driven by **Money**, **Acceptance**, and **Career Success**.
+
+> Organisations are groups of individuals that are structured and managed to meet a need, or to pursue collective goals.
+
+#### Maslow Hierarchy of Needs
+
+![Maslow](./prjmgt/maslow.svg)
+
+**Physiology** -> **Safety** -> **Love/Belonging** -> **Esteem** -> **Self-actualization**
+
+#### Herzberg Two Factor Theory
+
+![Herzberg](./prjmgt/herzberg.png)
+
+Increase Hygiene Factors reduce employee hate to the job (<s>工作还是一样烂，看在钱的面子上忍了</s>)
+
+Improve working condition, coworker relations, policies and rules, supervisor quality, and salary.
+
+Increase Motivator Factors increase employee love to the job (<s>工作能拿来吹逼，妙啊</s>)
+
+Make possible for Achievement, Recognition, Responsibility, Work itself, Advancement, and Personal Growth.
+
+Top two levels of Maslow Hierarchy considered as Motivators.
+
+### Leadership
+
+> Ability to direct people achieving common goal, ability to utilize resource and make decisions, help people to achieve goal, set objective and direct to finish it.
+
+#### Power
+
+![Power Leadership](./prjmgt/powlead.svg)
+
+Preferent Power: Follower's identification and like about the leader.
+
+Expert Power: Follower's perception on leader's competence.
+
+Legitimate Power: Having status or formal job authority.
+
+Reward Power: Having the capacity to provide reward to others.
+
+Coercive Power: Having the capacity to penalize others.
+
+#### Influence
+
+![Influence Leadership](./prjmgt/inflead.svg)
+
+People consider one as leader due to either the **legitimate authority**, or a combination of abilities to **influence future asg**, **authorize funds**, **improve worker pos**, **increase worker payment**, **cause punishment**, **assign work to individual**, **percieve relevant knowledge**, **being a friend**.
+
+---
+
+> PM is the most important in the project, one should be able to manage itself: being proactive, having vision, and maintaining integrity; lead others: thinking about mutual benefit, understanding, and creative cooperation; and consistently renew our knowledge.
+
+### TEAM
+
+> A team is two or more individuals having different set of skills working collaboratively for a common objective. (Commitment to each other and the final goal).
+
+<s>We have team because</s> : very little people have all skills and knowledge for a whole project, complementary teamwork skills are important to achieve substantial objective with shared accountability for success.
+
+<s>We have team because</s> : it enhance oppotunities on succes by increasing productivity, ownership and accountability, creativity, joy, broader perspective, representation, equality, and dialogue.
+
+---
+
+Team would undergo four stages: **Forming** -> **Storming** -> **Norming** -> **Performing** -> *Adjourning*
+
+![Tuckman model](./prjmgt/tmanmodel.png)
+
+Good team:
+
+- Clear communication
+- Regular brainstorming with all members participating
+- Consensus among team members
+- Problem solving done by the group
+- Commitment to the project outcomes and the other team members
+- Regular team meetings are effective and inclusive
+- Timely hand off from team members to others or early advise if this won’t happen
+- Positive, supportive working relationships
+
+Bad team:
+
+all the opposites
+
+---
+
+Controlled Centralized: one leader and several sub-leaders, communication and control vertical.
+Controlled Decentralized: same as controlled centralized, but communication horizontal.
+
+These two suitable for formal and large project.
+
+Democratic Decentralized: no permanant leader.
+
+SWAT Team: specialized team for specialized task. (team within a team)
+
+Scrum Team: best.
+
+---
+
+Team works best when it can provides more idea, increase knowledge, increase performance and output, provides continuous coverage, increase ownership.
+
+Team works by costing: time, effort, cannot fit for everybody, unequal to everybody, one person can ruin everything...
+
+## People skills - Communication and Stakeholders
+
+> Challenge is misinterpretation (<s>跨服聊天</s>)
+
+![Listening](./prjmgt/listen.svg)
+
+Active listening can lead to better cooperation.
+
+![Communication Skills](./prjmgt/commskill.svg)
