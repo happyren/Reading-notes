@@ -135,3 +135,144 @@ Idea to project:
 **Rough Order of Magnitude** : Estimation increase by time, initially 25% margin plus minus (Cone of Uncertainty).
 
 ## Project Planning
+
+Project Planning is composed by **Project Management Plan** and **SDLC**.
+
+### What is Project Management & SDLC
+
+Project management is a process which defines a series of tasks (**Planning** -> **Executing** -> **Controlling**) to deliver an outcome.
+
+SDLC (**Systems** Development Life Cycle) is a process of **Planning** -> **Creating** -> **Testing** -> **Deploying** an Info System.
+
+> A process is a series of progressive and interdependent steps by which an end is attained.
+
+### Project Management Plan
+
+> No unified standard of PMP must be followed, the standard varies but the goal shared.
+
+PMP is a formal document on how the project should be **executed** -> **monitored** -> **controlled**, fully managed by *Project Manager*, providing details and holding truth.
+
+> PC is short/summarized, PMP is formal and detailed. (PC shows why to do a project/PMP shows how)
+
+---
+
+![PMP components](./prjmgt/pmp.svg)
+
+Additionally, PMP should contains:
+
+- Roles/Responsibilities
+
+- Mandatory Project Planning:
+	- Schedule
+	- Risk Management
+	- Cost Estimation
+	- QA
+	- CM
+
+PMP is **large**, multiple *expert* would coporate on prepraing details, *PM* coordinates, in charge, and take the accountability for **quality** and **outcome**.
+
+### SDLC
+
+SDLC would be selected in **Project Planning** but execute in **Execution Phase**.
+
+![SDLC Components](./prjmgt/sdlc.svg)
+
+> The process of **implementation** -> **integration** -> **testing** -> **deployment** often in cycles, considered as CI/CD.
+
+---
+
+#### Formal Methods
+
+Waterfall:
+
+- simple to apply
+
+- easy to manage
+
+- phases are processed sequentially
+
+- documentation is rich
+
+- for requirements are very well understood and stable
+
+BUT:
+
+- not adaptive to changes (Incremental is better)
+
+- sequentially processed phase tasks
+
+- requirements must be clear
+
+- client approval at the very end
+
+- difficult to integrate risk management
+
+---
+
+Incremental is **multi-waterfall**, it can **early/fast release** operational product, **adaptive** to changes, **FB** is enabled to client for each build, and **easier for testing**; however, it requires **more resources**, **management attention**, increments are hard to **partition**, phases are still sequential, **integration issue**.
+
+---
+
+V-model is **continuous-testing-waterfall**, easy to use, has clear **phase objectives**, early testing increase success rate, works well for small PRJ; however, it is still sequential, not adaptive, no early deliverables, no problem handle mechanism.
+
+### Agile Methods
+
+> Changes are getting faster, customer needs result in CI/CD, entry barriers getting lower increases competition, cross-functional team fill in personal inability, QA is essential.
+
+Individuals and interactions over processes and tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan.
+
+![Agile Manifesto](./prjmgt/agilemanifesto.svg)
+
+---
+
+Agile is a collection of **SDLCs** (Methodologies), for **CI/CD** with **evolving requirements**, it encourage **adaptive** for changing, **teamwork** as well as **self-organizing**, aims to make fast and continuous delivery with QA.
+
+> 12 principles are important (<s>but useless</s>): agile satisfy customer with early, constant, and frequent delivery of working software, everyone working together in a motivated and self-organized manner with regular self-reflection, adapting changes for competitiveness, and keep the project sustainable with technical excellance while remaining simplicity.  
+
+#### SDLCs
+
+Kanban is a visualized tracking of working items which are **TO-DO**, **DOING**, and **DONE**.
+
+![Kanban Sample by Trello](./prjmgt/kanban.png)
+
+---
+
+Scrum is a light weight and simple framework to address complex adaptive problems, productively and creatively delivering products, it let team to maximize business value/time, ensures rapid inspection on product, let team determine the best way to deliver the most required features, and progress is visible.
+
+![Scrum Key Characteristics](./prjmgt/scrumchars.svg)
+
+Scrum has three major components:
+
+![Scrum components](./prjmgt/scrumcomps.svg)
+
+---
+
+PO: boss, defines the features, decide time and contents, look after ROI, make decision based upon market value, accept or reject.
+
+SM: team leader, who manage the project, apply scrum, remove impediments, ensure team functions, enable cooperation, and protect team.
+
+Team: Cross functional, full time and colocated.
+
+---
+
+Sprint planning would generate the tasks to achieve in the sprint and the sprint backlog. (goal, time estimation, plan, high-level design)
+
+Daily Scrum assigns tasks for each member in that day. (Did, do, impediments)
+
+Sprint review focus on the progress review, demo.
+
+Sprint retrospective views what is or isn't working, talk about **Start Doing**, **Stop Doing**, and **Keep Doing**.
+
+---
+
+User story describes requirement, story points is a measurement of difficulty on implementing this requirement, it helps evaluate how much work can be done in a sprint.
+
+Product Backlog contains user stories, express the value of function to clients, selected by PO, re-evaluated at the beginning of each sprint.
+
+Sprint Backlog contains lower level user stories, decomposed by the team from product backlog, remaining estimated items updated daily, either 100% done after the sprint or not done.
+
+Burndown chart build upon the story points against days, graphic interpretation of work left vs. time.
+
+#### Pros and Cons
+
+Agile satisfy customer with rapid, continuous delivery, better people interaction, QA, and adaptiveness to changes; however, up front estimation is hard to make, and requires users' time investment, not easy for new starter, and could be intense for unexperienced team.
