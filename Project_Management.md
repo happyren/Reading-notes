@@ -134,9 +134,9 @@ Idea to project:
 
 **Rough Order of Magnitude** : Estimation increase by time, initially 25% margin plus minus (Cone of Uncertainty).
 
-## Project Planning
+## Project Management Planning
 
-Project Planning is composed by **Project Management Plan** and **SDLC**.
+Project Management Planning is composed by **Project Management Plan** and **SDLC**.
 
 ### What is Project Management & SDLC
 
@@ -390,3 +390,118 @@ Team works by costing: time, effort, cannot fit for everybody, unequal to everyb
 Active listening can lead to better cooperation.
 
 ![Communication Skills](./prjmgt/commskill.svg)
+
+### Communication Plan
+
+Communication plan would contains the basic : **What**(What will be communicated), **How**(Which method to use), **When**(When info be distributed), **Who**(Who is responsible and relevant stakeholders). Additionally, what will be arranged for the communication(Hall, Conf room); how confidential this communication would be; agenda of communication; possible impedance; template and escalation process on resolving issues.
+
+---
+
+### Communication Methods
+
+> Info transfer beyong words, how people really feel conveys in body lang and tone, thats why we need face-to-face meeting.
+
+Receiver rarely gain full knowledge of sender, geo and culture diff raise comm complexity. <s>In order to communicate efficiently</s>, we need to manage conflicts, provides more FB, and choose appropriate channel.
+
+![Communication Channels](./prjmgt/commchannel.svg)
+
+Handle conflicts is an important task, task evolves:
+
+**No Conflicts** -> **Minor disaggreements** -> **Challengeing** -> **Verbal Attack** -> **Threats** -> **Physical attack** -> **Destroy**
+
+---
+
+Conflicts happen due to: schedule, project priorities, manpower, technical, administration, personality, cost. And can happen in all phases. <s>愚蠢的人类</s>
+
+### Stake holder
+
+Stakeholder management process: **identifying** -> **planning management** -> **managing engagement**
+
+#### Identifying Stakeholders
+
+![Internal Stakeholders](./prjmgt/instakeholder.svg)
+
+![External Stakeholders](./prjmgt/exstakeholder.svg)
+
+---
+
+We need the stakeholder's name, position, location, role, and contact information; then we can assess its requirement and expectation, infulence, and the time for it to participate.
+
+#### Stakeholder engagement level
+
+**Unaware** -> **Resistant** -> **Neutral** -> Supportive** -> **Champion/Leading**
+
+---
+
+| Current Engage level | Interrelationship | Comm Req | Potential strategies | Methods for update plan |
+
+## Ethics
+
+**ACS** Code of Ethics:
+
+- The Primacy of Public Interest.
+- The Enhancement of Quality of Life.
+- Honest.
+- Competence.
+- Professional Development.
+- Professionalism.
+
+<s>Have self-esteem, be confident on this one, or finally achieve self-awareness.</s>
+
+## Outsourcing
+
+> The practice of engaging an external party (under contract) to perform services or create goods that are traditionally performed in-house by the company's own employees.
+
+On-shoring, near-shoring, off-shoring
+
+---
+
+Outsourcing is used to reduce costs and save time. Having risks transfered to third party.
+
+Outsourcing could end up losing QA, and transfer responsibility may not be good for client.
+
+---
+
+### Contract
+
+> Contracts are the one source of truth for all activities that are to delivered by the external parties.
+
+Contract should clear responsibilities, increase the accountabilities of two parties, must be detailed and accurate, and will not be relied on until the last point.
+
+---
+
+There are three type of contract: **Fixed Price**, **Cost Plus**, and **Time & Material**. **Cost Plus** is bad for buyer because the price is paid for the product by this seller may not be the most economic efficient. (Fixed Price and Cost Plus could be incentive(extra payment or not))
+
+![Contract Elements](./prjmgt/contractel.svg)
+
+### Procurement Management Process
+
+> Procurement Management Process happens when there are outsourcing exists in the project.
+
+Procurement Management Process including three stages: **Plan** -> **Source** -> **Manage**
+
+---
+
+Procurement porcess is proceed by issueing Request For : Bid, Information, Proposal, Tender, or Quote.
+
+A RFx typically need purpose, business info, basic requirement, platform, process & evaluation, **SOW**, and some additional files.
+
+**SOW** is the most important: it details the work to be done, locate the work placement, list performance rubic, setting milestones.
+
+---
+
+In the Sourcing Stage, people in charge need to **approach market**, **find people to consult**, **contact potential bidder with document**, **obtaining bid**, **select bidder**, **negotiate contract**, and **award a contract**.
+
+Then evaluation must be made against RFx and based upon the demo of bidder, obtain the **Best and Final Offer** and conduct final negotiation.
+
+---
+
+To manage a contract procurement, implement according to RFx and SOW, manage agreement to ensure QA, and monitoring/controlling changes.
+
+**Changes** need to be controlled early, reviewed, approved, and documented.
+
+## Project Scheduling
+
+> Project schedule is one of the important artifact generated during the planning phase, used and maintained throughout the project.
+
+![Project Schedule Component](./prjmgt/schedule.svg)
