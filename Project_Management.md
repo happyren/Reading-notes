@@ -713,7 +713,62 @@ It measures solution based fully on requirements, so it could be done early and 
 
 > Similar to function points, modelled based on **Use Case Diagram**.
 
-**UCD** contains **Use Case** and **Actor**
+**UCD** contains **Use Case** and **Actor**.
+
+---
+
+Calculate Unadjusted Use Case Weight and Unadjusted Actor Weight based on number of transaction and interaction interface.
+
+---
+
+Calculate Technical Complexity Factor by accumulate TCF weight/score product, calculate the percentage + 0.6.
+
+---
+
+Calculate Environment Complexity Factor ECF = 1.4 + (-0.03 \* EF)
+
+---
+
+UCP = (UUCW + UAW) \* TCF \* ECF
+
+---
+
+It can be measured in early stage and could be accurate with experienced people, easy enough to be vastly applied for describing requirements; however, the requirements must be written in goal-oriented use cases, technical and environment are highly relevant.
+
+### COCOMO II
+
+> **Constructive Cost Model** II collecting data from a large number of software projects and derive formulae that best fits the observations.
+
+Widely used, well documented, available in public domain and is well supported by tools.
+
+#### Early Design model
+
+> Based on number of function points, used for initial effort estimation based on system requirements and design options.
+
+*Effort* = *A* \* *Size(Function Points/SLOC)* ^ *B* \* *M*
+
+| Parameter | Value |
+| :-: | :-: |
+| A | 2.94 |
+| Size | KSLOC by Func Points |
+| B | 1.01 - 1.26 |
+| M | Compute based on project and process characteristics |
+
+> KSLOC is calculated based upon function points
+
+**B** is calculated based on **Experience**, **Dev Flexibility**, **Architecture Completed and Risk Eliminated**, **Team Relation**, and **Process Maturity**.
+
+**M** is the product of all seven factors according to the given value.
+
+With effor calculated, **T**ime could be estimated by 2.5 times effort to *pow* (0.33 + 0.2(B - 1.01)) (Based on experience), then the personnel needed is calculated using Effor divide Time.
+
+---
+
+### Agile
+
+
+
+
 
 ## Risk Management
 
