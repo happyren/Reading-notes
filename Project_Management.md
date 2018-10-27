@@ -766,11 +766,17 @@ With effor calculated, **T**ime could be estimated by 2.5 times effort to *pow* 
 
 ### Agile
 
+> Story points is a measure of size of user story; Velocity is the measure of Story points done per Scrum/Sprint.
 
+Cost estimation in agile should be consistant (analogy), story can be decomposed to task for easier evaluation, points should not be too fine grained, and the decision should be made by the team.
 
-
+Possible methods are: *planning poker*, *bucket system*, *relative mass valuation*.
 
 ## Risk Management
+
+> Risk is an uncertainty with impact, could be positive or negative.
+
+**Develop stories** -> **assign story points** -> **estimate time based on previous velocity** -> **Reevaluate velocity and recalculate time**
 
 ## Quality Management
 
