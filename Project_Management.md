@@ -1,3 +1,17 @@
+
+- [Basic about project](#project)
+- [Basic about PM](#project-management-overall)
+- [Initiation](#project-initiation)
+- [PMP](#project-management-planning)
+- [Team](#people-skills-team)
+- [Communication and Stakeholders](#people-skills-communication-and-stakeholders)
+- [Ethics](#ethics)
+- [Outsourcing](#outsourcing)
+- [Project Scheduling](#project-scheduling)
+- [Cost Estimation](#cost-estimation)
+
+
+
 ## Project
 
 ### What is a project
@@ -505,3 +519,104 @@ To manage a contract procurement, implement according to RFx and SOW, manage agr
 > Project schedule is one of the important artifact generated during the planning phase, used and maintained throughout the project.
 
 ![Project Schedule Component](./prjmgt/schedule.svg)
+
+---
+
+Formal SDLCs are **plan driven**, with fixed scope, while agile is 	**Value/Vision Driven** with fixed time and cost. (Not necessary in reality).
+
+### Developing Schedule
+
+Work Breakdown Structure -> Develop **task network** based on interdependencies -> **effort** and **time allocation** estimation -> **resource** allocation -> finalize project schedule
+
+---
+
+WBS: estimate resource needs, interim goal, monitor progress. Broken down tasks should have specific outcomes and deliverables.
+
+---
+
+> **Unconstraint task** can start anytime, **Constraint task** can only start after predecessor task.
+
+Dependencies comes from either one task rely on the other's outcome, or shared resources.
+
+Dependency types is combinations of **Finish** and **Start**.
+
+---
+
+### Time estimation
+
+> Time is generally estimated using person-month (person-day), by definition the time in months for a person to finish a task.
+
+Expected Time = (Optimistic + 4Most Likely + Pessimistic) / 6
+
+Having **effort-time** and **expected-time** we can calculate the expected personnel to be assigned, however, it also relates to resource allocation, expertise allocation.
+
+### Forming a schedule
+
+> Schedule will answer to **How long** and **How much** corelatively.
+
+#### Gantt Charts
+
+> Milestones: points along the project timeline, could be indicating *start/end of project/phase*, *need for external review*, *completion of deliverable*.
+
+---
+
+> Deliverables could be *documentations*, *prototypes*, or *final products*.
+
+Two types of **Gantt Chart**, either *Linked* chained showing dependencies, or *Progress* shaded showing degree of completion.
+
+#### PERT (Program Evaluation & Review Technique) Charts
+
+> Task network shows dependencies with time related info and critical path.
+
+PERT chart should include : *Earliest start time*, *Latest start time*, *Earliest finish time*, *Latest finish time*, *Slack time*.
+
+![PERT fillings](./prjmgt/pert.png)
+
+> Critical path has longest duration, having no slack, and would result in final product delay.
+
+To shorten the project duration, one can either shorten critical path links, or shorten critical task duration.
+
+### Monitoring and Controlling
+
+<s>To track if a project is fallen behind the schedule</s>: periodic meeting for progress report, evaluating based on review, tracking project milestone, comparing key dates, informal discussion, and **earned value analysis**
+
+---
+
+**EVA**: report current/past project performance and making prediction for future project based on it.
+
+**Planed Value** : portion of approved cost based upon original estimation.
+
+**Earned Value** : value of actual work done.
+
+**Actual Cost** : actual cost in accomplishing work.
+
+**Scheduled Variance** : *Earned Value* - *Planned Value*
+
+**Scheduled Performance Index** : *Earned Value*/*Planned Value*
+
+**Cost Variance** : *Earned Value* - *Actual Cost*
+
+**Cost Performance Index** : *Earned Value*/*Actual Cost*
+
+### Agile
+
+In agile, plan is in short term, every plan is based upon the next delivery, and plan is on the next iteration.
+
+> **Daily Scrum** -> **Sprint** -> **Release** -> **Product** -> **Portfolio**
+
+Normally either one of **Scope fixed**, **Budget fixed**, or **Schedule fixed**.
+
+In reality, we will have **Fixed Date and Budget** or **Fixed Scope**.
+
+---
+
+#### Fixed Date
+
+Using *duration*/*sprint length* calculating *sprint number* -> **modifying the product backlog by priorities** -> measure velocity *[Vmin, Vmax]* -> calculate story points *[SPmin, SPmax]* -> draw line on product backlog.
+
+#### Fixed Scope
+
+Arrange Product Backlog by priorities -> *SPmust* -> calc *[Vmin, Vmax]* -> compute *[Smax, Smin]* -> Burn down chart.
+
+## Cost estimation
+
