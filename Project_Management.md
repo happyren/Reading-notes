@@ -9,6 +9,9 @@
 - [Outsourcing](#outsourcing)
 - [Project Scheduling](#project-scheduling)
 - [Cost Estimation](#cost-estimation)
+- [Risk Management](#risk-management)
+- [Quality Management](#quality-management)
+- [Configuration Management](#configuration-management)
 
 
 
@@ -620,3 +623,100 @@ Arrange Product Backlog by priorities -> *SPmust* -> calc *[Vmin, Vmax]* -> comp
 
 ## Cost estimation
 
+> <s>SW cost estimation is a process of</s> : estimate how much money, effort, resource, and time it will take to build a specific SW based system or product.
+
+Problem is, accurate estimation in cost is almost impossible, general solution is assume things will go as expected and add-in some slacks.
+
+---
+
+Solutions are, <s>Delay estimation</s>, predict based on previous project, decompose project and make modular prediction, empirically-based estimation.
+
+![Cost estimation](./prjmgt/costestimation.svg)
+
+> Algorithmic cost modelling is clearly the one to choose - for accuracy. <s>(Generally, but if the team is constructed by experts...)</s>
+
+**ACM** methods need to modelling the project size *software metric* and collecting *historic cost information*.
+
+*Effort* = *CONST* \* *Size*^*B* \* *M*
+
+*CONST*, *B*, and *M* are independent from *Size*.
+
+### SW Size estimation
+
+**Common Metrics**: *Source Lines of Code*, *Function Points*, *Use-case Points*.
+
+---
+
+**SLOC**: Physical SLOC is counting lines of code (literally); Logical SLOC is counting executable lines based on computer language.
+
+It's good because it is *physical* and *intuitive* measure can be done automatically; however it *varies* by programmer, lang, framework, etc; and hard to analysis from the planning phase *with only analysis and design*; and unclear of *what a line is*.
+
+> Useful for small project estimation.
+
+#### Function points
+
+**Function Points** express how many functions in a SW system, higher **FP** means more functionalities. It generally should cover **design** -> **code** -> **test**, spot **errors** and **components**, measure productivity.
+
+**SRS(Software Requirement Specification)** : specify the expectation, contains **functional** and **non-functional** requirements.
+
+![Function Points Calculation](./prjmgt/fps.svg)
+
+---
+
+Requirements should be categorized:
+
+![Requirement Categorize](./prjmgt/reqcat.svg)
+
+**ILF** and **EIF** are logical grouping of data inside a SW or maintained outside of the SW. (RDB)
+
+**EI** and **EO** are input and output.
+
+**EQ** is used to query logic files.
+
+---
+
+Complexity Value would be estimated:
+
+**Simple**/**Average**/**Complex** commonly used based on **Data Element Types(DETs)**, **Record Element Types(RETs)**, or **File Type References(FTRs)**.
+
+Complexity table for *Data Functions* and *Transaction Functions* are needed.
+
+**DETs** how many data type fields are used in this function.
+**RETs** how many database file accessed in this function with logical calculation.
+**FTRs** how many files accessed by a function with transaction.
+
+Using composition of (**DETs**, **RETs/FTRs**) to allocate a complexity.
+
+---
+
+Compute count total:
+
+Five CATs' requirements number * compelxity points = CAT points
+
+SUM -> count total.
+
+---
+
+Value adjustment factors:
+
+Compute based on 14 characteristic each ranking 0-5 proportion to importance.
+
+---
+
+FP = count total \* (0.65 + 0.01 \* value adjustment factors)
+
+---
+
+It measures solution based fully on requirements, so it could be done early and independent from tech and lang; however it requires clear requirements, need to learn to use it, and could be time consuming.
+
+#### Use Case Points
+
+> Similar to function points, modelled based on **Use Case Diagram**.
+
+**UCD** contains **Use Case** and **Actor**
+
+## Risk Management
+
+## Quality Management
+
+## Configuration Management
