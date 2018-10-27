@@ -778,6 +778,113 @@ Possible methods are: *planning poker*, *bucket system*, *relative mass valuatio
 
 **Develop stories** -> **assign story points** -> **estimate time based on previous velocity** -> **Reevaluate velocity and recalculate time**
 
+Risk can be *Business Risk*, *Project Risk*, or *Product Risk*.
+
+<s>**Risk Management**</s> minimizes the impact of potential negative risks while maximizing the impact of positive ones.
+
+**Plan** -> **Identify** -> **Analyze and Assess** -> **Respond** -> **Monitor and Control**
+
+---
+
+### Risk Management Plan
+
+> Output of risk management planning, team need to understand and implement org's and sponsor's risk management approaches.
+
+RMP needs to clear **methodology** used to mitigate risk, **who** in charge, **budget** and **time** to solve it, **Risk CAT**, **Probability & impact** (exposure), **How to track it**, **documentation**, and **back up plans**.
+
+### Identify Risk
+
+> We need to know how possible a event would happen bring how much impact and if we have any level of control.
+
+There are **generic risk** for every SW project and **product-specific risk** for the particular project.
+
+Risks can be categorized as **Project risk** to affect the project development, **Product risk** to affect the product quality or outcome, and **Business risk** to affect the economic success of the project.
+
+---
+
+> SWOT analysis: Strengths, Weakness, Oppotunities, and Threats, should be regularly done.
+
+---
+
+Risk analysis would identify risk **probability** and **impact**. And based upon it, risks would be prioritized.
+
+**Qualitative** method is experience based, **Quantitative** method is mathematical.
+
+\* Additionally, root cause must be identified, which could be addressed so to handle the risks of the same cause.
+
+---
+
+Quantitative methods would using **decision tree**, **simulation**, or **sensitive analysis** to measure the probability distribution of risks.
+
+### Response
+
+Negative:
+
+**Accept/Ignore** -> **Avoid** -> **Mitigate** -> **Transfer**
+
+---
+
+Positive:
+
+**Exploit** -> **Enhance** -> **Share** -> **Accept**
+
+---
+
+The responses should be documented into risk triggers.
+
+| Risk ID | Trigger | Owner | Response | Resource Required |
+| :-: | :-: | :-: | :-: | :-: |
+
+### Monitor and Control
+
+- **Risk Audits** : external team investigate the ID process and ensuring procedure and process are in place.
+
+- **Risk Review** : internal review for periodic status report.
+
+- **Risk Status meetings** : weekly meetings for risk review and discussion.
+
 ## Quality Management
 
+> It should be done from both **End-user** and **Developer** perspective, which would lead to certain compromises.
+
+The quality of process reflects on final product, QA involves measuring and assessing the product and the process.
+
+**QA** is essential, do not leave it till end-user report.
+
+---
+
+**Quality Assurance** -> **Quality Planning** -> **Quality Control**
+
+### QA
+
+> Defining and selecting quality standards - the rules to ensure quality.
+
+There are **product** and **process** standards, for **product** standards, it is important to have **documentation standard**, which provides manifesto to the SW, shows how the documents are developed and maintained, structured and interchanged.
+
+<s>These standards</s> provides framework to follow, encapsulates the best practice in industry, and give customers confidence on making decisions; however, they are not seen as relevant with a ton of bureaucratic form, and require a lot of people power.
+
+> ISO 9000 and Capability Maturity Model
+
+CMM is a 5 level standard with a lot of companies stuck at level 3. (**Initial** -> **Managed** -> **Defined** -> **Quantitatively Managed** -> **Optimizing**)
+
+### QP
+
+> Process of selecting standards suitable to a org and project. Generates **SW Quality Plan** SQP / **SW Quality Assurance Plan** SQAP.
+
+It would need to provides **Product Overview**, **Product Plan**, **Quality Goal**, **Process Description**, **Documentation & Coding Standards**, and **Risk/RMP**.
+
+**Verification** and **Validation** are needed, to ensure product meets the requirement with process-orientation, and to ensure product meets functional and quality standards with product-orientation. **Verification** prior to **Validation**.
+
+### QC & QM
+
+Consistent monitoring the process to ensure both process and product are following **SQAP**. 
+
 ## Configuration Management
+
+> To manage the dependencies between artifacts and their states.
+
+Aim is to manage changes properly without losing overall consistency by estabilishing process, setting up repositories, and using tools like *Maven*.
+
+### CM Process
+
+**ID all relative items** -> **Manage changes properly while maintaining consistency** -> **Managing different versions** -> **QA while changing**.
