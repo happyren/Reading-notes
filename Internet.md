@@ -53,7 +53,7 @@ Home internet is often setup due to:
 
 Cellular, WiFi, GPS, etc.
 
-### Harware Technology
+### Hardware Technology
 
 Generally, there are three type transmission technology in daily usage.
 
